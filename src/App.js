@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { ThemeProvider } from "styled-components";
+import Intro from "./components/Intro";
 
-function App() {
+const theme = {
+  primary: "#2E3440",
+  secondary: "#434C5E",
+  textPrimary: "#D8DEE9",
+  textSecondary: "#ECEFF4",
+};
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Intro />
+      </div>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
