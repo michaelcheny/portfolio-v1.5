@@ -6,9 +6,11 @@ const Toggle = styled.button`
   right: 0;
   top: 0;
   border-radius: 5px;
-  padding: 3px;
+  padding: 1px 3px;
+  margin: 6px;
   background-color: ${(props) => props.theme.ternary};
   color: ${(props) => props.theme.textPrimary};
+  border: none;
 `;
 
 const ThemeToggle = ({ toggle }) => {

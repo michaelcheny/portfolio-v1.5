@@ -10,8 +10,8 @@ const Section = styled.section`
   align-items: center;
 `;
 
-const Intro = () => {
-  return <Section>Intro</Section>;
+const Projects = () => {
+  return <Section>Projects</Section>;
 };
 
-export default Intro;
+export default Projects;
