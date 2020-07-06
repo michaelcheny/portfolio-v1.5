@@ -24,6 +24,11 @@ const InsideMenu = styled.div`
   border-radius: 5px;
   background-color: ${(props) => props.theme.secondary};
   transition: 200ms;
+
+  @media (max-width: 768px) {
+    width: 50vw;
+    height: 40vh;
+  }
 `;
 
 const Link = styled.a`
