@@ -9,8 +9,8 @@ import Menu from "./Menu";
 
 const darkTheme = {
   primary: "#2E3440",
-  secondary: "#434C5E",
-  ternary: "#434C5E",
+  secondary: "#3B4252",
+  ternary: "#4C566A",
   textPrimary: "#D8DEE9",
   textSecondary: "#ECEFF4",
   textAccent: "#8FBCBB",
@@ -33,7 +33,6 @@ const App = () => {
     <ThemeProvider theme={dark ? darkTheme : lightTheme}>
       <MenuToggle setShowMenu={setShowMenu} />
       {showMenu && <Menu setShowMenu={setShowMenu} toggleTheme={setDark} />}
-      {/* <ThemeToggle toggle={setDark} /> */}
       <Intro />
       <Projects />
       <Footer />

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useClickOutside } from "../helpers/ClickOutsideHook";
 import gucciFlipFlop from "../assets/images/gucciFlipFlop.png";
+import resume from "../assets/resume/resume.pdf";
 
 const MenuContainer = styled.div`
   position: fixed;
@@ -25,6 +26,14 @@ const InsideMenu = styled.div`
   transition: 200ms;
 `;
 
+const Link = styled.a`
+  text-decoration: none;
+  color: ${(props) => props.theme.textSecondary};
+  &:hover {
+    color: ${(props) => props.theme.textAccent};
+  }
+`;
+
 const Menu = ({ setShowMenu, toggleTheme }) => {
   const outsideNode = useClickOutside(() => setShowMenu(false));
 
@@ -37,9 +46,9 @@ const Menu = ({ setShowMenu, toggleTheme }) => {
           style={{ height: "2rem" }}
           onClick={() => toggleTheme((prev) => !prev)}
         />
-        <a href="#" target="_blank">
-          ADD STUFF HERE LIKE RESUME
-        </a>
+        <Link href={resume} target="_blank" rel="noopener noreferrer">
+          Resume
+        </Link>
       </InsideMenu>
     </MenuContainer>
   );
