@@ -37,7 +37,9 @@ const Menu = ({ setShowMenu, toggleTheme }) => {
           style={{ height: "2rem" }}
           onClick={() => toggleTheme((prev) => !prev)}
         />
-        ADD STUFF HERE LIKE RESUME
+        <a href="#" target="_blank">
+          ADD STUFF HERE LIKE RESUME
+        </a>
       </InsideMenu>
     </MenuContainer>
   );

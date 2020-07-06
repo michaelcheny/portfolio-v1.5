@@ -14,6 +14,7 @@ const FooterContainer = styled.div`
   flex-direction: column;
   background-color: ${(props) => props.theme.primary};
   padding: 2rem;
+  transition: 100ms;
 `;
 
 const SocialContainer = styled.div`

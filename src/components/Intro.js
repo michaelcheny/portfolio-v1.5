@@ -8,6 +8,7 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 100ms;
 `;
 
 const Intro = () => {
