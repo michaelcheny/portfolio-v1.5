@@ -1,5 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
+import { useClickOutside } from "../helpers/ClickOutsideHook";
+import gucciFlipFlop from "../assets/images/gucciFlipFlop.png";
 
 const MenuContainer = styled.div`
   position: fixed;
@@ -14,35 +16,29 @@ const MenuContainer = styled.div`
 
 const InsideMenu = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  height: 40vh;
-  width: 40vw;
+  height: 20vh;
+  width: 30vw;
   border-radius: 5px;
   background-color: ${(props) => props.theme.secondary};
+  transition: 200ms;
 `;
 
-const useClickOutside = (handler) => {
-  let domNode = useRef();
-
-  useEffect(() => {
-    const outsideClickHandler = (event) => {
-      if (!domNode.current.contains(event.target)) handler();
-    };
-    document.addEventListener("click", outsideClickHandler);
-    return () => {
-      document.removeEventListener("click", outsideClickHandler);
-    };
-  });
-  return domNode;
-};
-
-const Menu = ({ setShowMenu }) => {
+const Menu = ({ setShowMenu, toggleTheme }) => {
   const outsideNode = useClickOutside(() => setShowMenu(false));
 
   return (
     <MenuContainer>
-      <InsideMenu ref={outsideNode}>hjkfdshjklas</InsideMenu>
+      <InsideMenu ref={outsideNode}>
+        <img
+          src={gucciFlipFlop}
+          alt="toggleTheme"
+          style={{ height: "2rem" }}
+          onClick={() => toggleTheme((prev) => !prev)}
+        />
+        ADD STUFF HERE LIKE RESUME
+      </InsideMenu>
     </MenuContainer>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import { ThemeProvider } from "styled-components";
 import Intro from "./Intro";
-import ThemeToggle from "./MenuToggle";
+import MenuToggle from "./MenuToggle";
 import Projects from "./Projects";
 import Footer from "./Footer";
 import Menu from "./Menu";
@@ -31,9 +31,9 @@ const App = () => {
 
   return (
     <ThemeProvider theme={dark ? darkTheme : lightTheme}>
-      <ThemeToggle setShowMenu={setShowMenu} />
+      <MenuToggle setShowMenu={setShowMenu} />
+      {showMenu && <Menu setShowMenu={setShowMenu} toggleTheme={setDark} />}
       {/* <ThemeToggle toggle={setDark} /> */}
-      {showMenu && <Menu setShowMenu={setShowMenu} />}
       <Intro />
       <Projects />
       <Footer />
