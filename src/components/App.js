@@ -12,6 +12,7 @@ const darkTheme = {
   ternary: "#434C5E",
   textPrimary: "#D8DEE9",
   textSecondary: "#ECEFF4",
+  textAccent: "#8FBCBB",
 };
 
 const lightTheme = {
@@ -20,6 +21,7 @@ const lightTheme = {
   ternary: "#E5E9F0",
   textPrimary: "#2E3440",
   textSecondary: "#4C566A",
+  textAccent: "#81A1C1",
 };
 
 const App = () => {
