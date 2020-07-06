@@ -25,10 +25,10 @@ const Toggle = styled.button`
   }
 `;
 
-const ThemeToggle = ({ toggle }) => {
+const MenuToggle = ({ setShowMenu }) => {
   return (
     <div>
-      <Toggle onClick={() => toggle((prev) => !prev)}>
+      <Toggle onClick={() => setShowMenu(true)}>
         {/* <img src={gucciFlipFlop} alt="guccimenu" style={{ height: "1.2rem" }} /> */}
         <FontAwesomeIcon icon={faBars} size="1x" style={{ transform: "scale(1.5)" }} />
       </Toggle>
@@ -36,4 +36,4 @@ const ThemeToggle = ({ toggle }) => {
   );
 };
 
-export default ThemeToggle;
+export default MenuToggle;

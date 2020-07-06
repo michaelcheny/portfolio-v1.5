@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "../App.css";
 import { ThemeProvider } from "styled-components";
 import Intro from "./Intro";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "./MenuToggle";
 import Projects from "./Projects";
 import Footer from "./Footer";
+import Menu from "./Menu";
 
 const darkTheme = {
   primary: "#2E3440",
@@ -26,9 +27,13 @@ const lightTheme = {
 
 const App = () => {
   const [dark, setDark] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <ThemeProvider theme={dark ? darkTheme : lightTheme}>
-      <ThemeToggle toggle={setDark} />
+      <ThemeToggle setShowMenu={setShowMenu} />
+      {/* <ThemeToggle toggle={setDark} /> */}
+      {showMenu && <Menu setShowMenu={setShowMenu} />}
       <Intro />
       <Projects />
       <Footer />
