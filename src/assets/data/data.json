@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "name": "LFG Collab",
+      "image": "http://www.a1carpet-to.com/wp-content/uploads/2015/08/600x400.png",
+      "description": "An online collaboration hub for users to work on projects together.",
+      "techStack": ["React", "Redux", "Ruby", "Ruby on Rails", "Postgresql"],
+      "githubLink": "https://github.com/michaelcheny/LFG-Collab-Front-End",
+      "demoLink": "https://youtu.be/aZZLe_tEkDk"
+    },
+    {
+      "name": "Floppy Drop",
+      "image": "http://www.a1carpet-to.com/wp-content/uploads/2015/08/600x400.png",
+      "description": "Interactive browser game where player collide with falling objects to earn points.",
+      "techStack": ["JavaScript", "HTML5 Canvas", "Ruby", "Ruby on Rails", "Postgresql"],
+      "githubLink": "https://github.com/michaelcheny/Floppy-Drop-Javascript-game",
+      "demoLink": "https://youtu.be/Ya_F4OZHX0E"
+    },
+    {
+      "name": "Real Life RPG",
+      "image": "http://www.a1carpet-to.com/wp-content/uploads/2015/08/600x400.png",
+      "description": "Gamified task manager/goal tracker. Level up real life skills by completing activities.",
+      "techStack": ["Ruby", "Ruby on Rails", "mySql", "OAuth"],
+      "githubLink": "https://github.com/michaelcheny/Real-Life-RPG-Rails-Project",
+      "demoLink": "https://youtu.be/wqGUY1FIEdw"
+    },
+    {
+      "name": "Health-Track-O-Bot 3000",
+      "image": "http://www.a1carpet-to.com/wp-content/uploads/2015/08/600x400.png",
+      "description": "Streamlined health tracker. Enter health stat, track meals and workouts, receive personalized feedback.",
+      "techStack": ["Ruby", "Sinatra", "mySql", "Bcrypt", "OAuth"],
+      "githubLink": "https://github.com/michaelcheny/The-Health-Track-O-Bot-3000-built-with-Sinatra-",
+      "demoLink": "https://youtu.be/18NzkHLmUMI"
+    },
+    {
+      "name": "Heathly Recipes Gem",
+      "image": "http://www.a1carpet-to.com/wp-content/uploads/2015/08/600x400.png",
+      "description": "Ruby gem that provides over 500 healthy recipes.",
+      "techStack": ["JavaScript", "HTML5 Canvas", "Ruby", "Ruby on Rails", "Postgresql"],
+      "githubLink": "https://github.com/michaelcheny/Floppy-Drop-Javascript-game",
+      "demoLink": "https://youtu.be/Ya_F4OZHX0E"
+    }
+  ]
+}

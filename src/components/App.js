@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import Intro from "./Intro";
 import ThemeToggle from "./ThemeToggle";
 import Projects from "./Projects";
+import Footer from "./Footer";
 
 const darkTheme = {
   primary: "#2E3440",
@@ -28,6 +29,7 @@ const App = () => {
       <ThemeToggle toggle={setDark} />
       <Intro />
       <Projects />
+      <Footer />
     </ThemeProvider>
   );
 };
