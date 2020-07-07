@@ -28,17 +28,17 @@ const lightTheme = {
 };
 
 const App = () => {
-  const [dark, setDark] = useState(true);
+  const [colorTheme, setColorTheme] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
 
-  // useEffect(() => {
-  //   if (localStorage.getItem("theme")) setDark(localStorage.getItem("theme"));
-  // }, []);
+  useEffect(() => {
+    if (localStorage.getItem("theme")) setColorTheme(localStorage.getItem("theme"));
+  }, []);
 
   return (
-    <ThemeProvider theme={dark ? darkTheme : lightTheme}>
+    <ThemeProvider theme={colorTheme ? darkTheme : lightTheme}>
       <MenuToggle setShowMenu={setShowMenu} />
-      {showMenu && <Menu setShowMenu={setShowMenu} toggleTheme={setDark} theme={dark} />}
+      {showMenu && <Menu setShowMenu={setShowMenu} setTheme={setColorTheme} theme={colorTheme} />}
       <Intro />
       <Projects />
       <Footer />

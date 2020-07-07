@@ -39,9 +39,9 @@ const Link = styled.a`
   }
 `;
 
-const Menu = ({ setShowMenu, toggleTheme, theme }) => {
+const Menu = ({ setShowMenu, setTheme, theme }) => {
   const outsideNode = useClickOutside(() => setShowMenu(false));
-
+  // const themes = ["theme1", "theme2", "theme3"];
   return (
     <MenuContainer>
       <InsideMenu ref={outsideNode}>
@@ -50,10 +50,23 @@ const Menu = ({ setShowMenu, toggleTheme, theme }) => {
           alt="toggleTheme"
           style={{ height: "2rem" }}
           onClick={() => {
-            toggleTheme((prev) => !prev);
-            // localStorage.setItem("theme", theme);
+            setTheme((prev) => !prev);
+            localStorage.setItem("theme", theme);
           }}
         />
+        <div>
+          {/* {themes.map((theme) => (
+            <span
+              onClick={() => {
+                setTheme((prev) => !prev);
+                console.log(theme);
+                localStorage.setItem("theme", theme);
+              }}
+            >
+              {theme}
+            </span>
+          ))} */}
+        </div>
         <Link href={resume} target="_blank" rel="noopener noreferrer">
           Resume
         </Link>

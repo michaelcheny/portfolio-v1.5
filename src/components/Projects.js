@@ -24,10 +24,10 @@ const ProjectContainer = styled.div`
   display: flex;
   /* justify-content: space-between; */
   margin: 2.5rem 0;
-  /* border: blue 1px solid; */
+  border: blue 1px solid;
   width: 70vw;
   max-width: 1024px;
-  height: 40vh;
+  /* height: 40vh; */
 
   @media (max-width: 900px) {
     flex-direction: column-reverse;
@@ -35,7 +35,7 @@ const ProjectContainer = styled.div`
     align-items: center;
     /* margin: 2rem 0; */
     padding-top: 5rem;
-    margin: 6rem 0;
+    margin: 4rem 0;
   }
 `;
 
@@ -113,7 +113,8 @@ const PhotoContainer = styled.div`
     max-height: auto;
     @media (max-width: 900px) {
       /* min-width: 300px; */
-      transform: scale(1.2);
+      transform: scale(1.25);
+      margin: 1rem;
     }
     /* &:hover {
       background-color: rgba(0, 0, 0, 0.5);
@@ -133,8 +134,8 @@ const Project = ({ project }) => {
         <span className="title">{project.name}</span>
         <div className="description">{project.description}</div>
         <StackContainer>
-          {project.techStack.map((stack) => (
-            <span>{stack}</span>
+          {project.techStack.map((stack, index) => (
+            <span key={index}>{stack}</span>
           ))}
         </StackContainer>
         <div className="links">
@@ -156,8 +157,8 @@ const Project = ({ project }) => {
 const Projects = () => {
   return (
     <Section>
-      {data.projects.map((project) => (
-        <Project project={project} />
+      {data.projects.map((project, index) => (
+        <Project project={project} key={index} />
       ))}
     </Section>
   );
