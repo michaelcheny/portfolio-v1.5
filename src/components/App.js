@@ -14,6 +14,7 @@ const darkTheme = {
   textPrimary: "#D8DEE9",
   textSecondary: "#ECEFF4",
   textAccent: "#8FBCBB",
+  textAccent2: "#88C0D0",
 };
 
 const lightTheme = {
@@ -23,6 +24,7 @@ const lightTheme = {
   textPrimary: "#2E3440",
   textSecondary: "#4C566A",
   textAccent: "#81A1C1",
+  textAccent2: "#5E81AC",
 };
 
 const App = () => {
