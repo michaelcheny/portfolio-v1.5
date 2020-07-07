@@ -39,7 +39,7 @@ const Link = styled.a`
   }
 `;
 
-const Menu = ({ setShowMenu, toggleTheme }) => {
+const Menu = ({ setShowMenu, toggleTheme, theme }) => {
   const outsideNode = useClickOutside(() => setShowMenu(false));
 
   return (
@@ -49,7 +49,10 @@ const Menu = ({ setShowMenu, toggleTheme }) => {
           src={gucciFlipFlop}
           alt="toggleTheme"
           style={{ height: "2rem" }}
-          onClick={() => toggleTheme((prev) => !prev)}
+          onClick={() => {
+            toggleTheme((prev) => !prev);
+            // localStorage.setItem("theme", theme);
+          }}
         />
         <Link href={resume} target="_blank" rel="noopener noreferrer">
           Resume

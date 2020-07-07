@@ -23,7 +23,7 @@ const Section = styled.section`
 const ProjectContainer = styled.div`
   display: flex;
   /* justify-content: space-between; */
-  margin: 3rem 0;
+  margin: 2.5rem 0;
   /* border: blue 1px solid; */
   width: 70vw;
   max-width: 1024px;
@@ -35,6 +35,7 @@ const ProjectContainer = styled.div`
     align-items: center;
     /* margin: 2rem 0; */
     padding-top: 5rem;
+    margin: 6rem 0;
   }
 `;
 
@@ -53,6 +54,10 @@ const DetailContainer = styled.div`
     color: ${(props) => props.theme.textPrimary};
     padding-bottom: 1rem;
     /* display: none; */
+    @media (max-width: 900px) {
+      padding-top: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
   }
   .description {
     color: ${(props) => props.theme.textSecondary};
@@ -69,6 +74,9 @@ const DetailContainer = styled.div`
       transform: scale(1.5);
       margin-right: 1.5rem;
       color: ${(props) => props.theme.textAccent};
+    }
+    @media (max-width: 900px) {
+      margin-top: 0.9rem;
     }
   }
 
@@ -88,6 +96,9 @@ const StackContainer = styled.div`
     margin-top: 0.8rem;
     margin-right: 1rem;
   }
+    @media (max-width: 900px) {
+      margin-top: 0.25rem;
+    }
 `;
 
 const PhotoContainer = styled.div`
@@ -100,6 +111,13 @@ const PhotoContainer = styled.div`
     object-fit: scale-down;
     max-width: 100%;
     max-height: auto;
+    @media (max-width: 900px) {
+      /* min-width: 300px; */
+      transform: scale(1.2);
+    }
+    /* &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    } */
   }
   @media (max-width: 900px) {
     max-width: 80%;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import { ThemeProvider } from "styled-components";
 import Intro from "./Intro";
@@ -31,10 +31,14 @@ const App = () => {
   const [dark, setDark] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
 
+  // useEffect(() => {
+  //   if (localStorage.getItem("theme")) setDark(localStorage.getItem("theme"));
+  // }, []);
+
   return (
     <ThemeProvider theme={dark ? darkTheme : lightTheme}>
       <MenuToggle setShowMenu={setShowMenu} />
-      {showMenu && <Menu setShowMenu={setShowMenu} toggleTheme={setDark} />}
+      {showMenu && <Menu setShowMenu={setShowMenu} toggleTheme={setDark} theme={dark} />}
       <Intro />
       <Projects />
       <Footer />
