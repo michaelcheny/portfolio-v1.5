@@ -31,7 +31,7 @@ const ProfilePic = styled.div`
     max-height:100%;
     border-radius: 100%;
     object-fit: cover;
-    /* border: 1px green solid; */
+    border: 3px ${({ theme }) => theme.textAccent} solid;
   }
 `;
 

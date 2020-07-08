@@ -7,4 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.30s linear;
   }
+  p {
+    line-height: 125%;
+  }
   `;
