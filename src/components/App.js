@@ -9,6 +9,7 @@ import Menu from "./Menu";
 import { GlobalStyle } from "../globalstyles";
 import { darkTheme, lightTheme } from "../components/Themes";
 import { useDarkMode } from "../helpers/useDarkMode";
+import About from "./About";
 
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -21,6 +22,7 @@ const App = () => {
       <MenuToggle setShowMenu={setShowMenu} />
       {showMenu && <Menu setShowMenu={setShowMenu} setTheme={themeToggler} theme={theme} />}
       <Intro />
+      <About />
       <Projects />
       <Footer />
     </ThemeProvider>

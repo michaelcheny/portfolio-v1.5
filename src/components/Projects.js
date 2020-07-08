@@ -21,7 +21,7 @@ const ProjectContainer = styled.div`
   display: flex;
   /* justify-content: space-between; */
   margin: 2.5rem 0;
-  border: blue 1px solid;
+  /* border: blue 1px solid; */
   width: 70vw;
   max-width: 1024px;
   /* height: 40vh; */
@@ -129,30 +129,41 @@ const PhotoContainer = styled.div`
   }
 `;
 
+const Seperator = styled.hr`
+  width: 70vw;
+  border: 0.5px ${({ theme }) => theme.secondary} solid;
+
+  :last-child {
+    display: none;
+  }
+`;
+
 const Project = ({ project }) => {
   return (
-    <ProjectContainer>
-      <DetailContainer>
-        <span className="title">{project.name}</span>
-        <div className="description">{project.description}</div>
-        <StackContainer>
-          {project.techStack.map((stack, index) => (
-            <span key={index}>{stack}</span>
-          ))}
-        </StackContainer>
-        <div className="links">
-          <a href={project.githubLink} title="GitHub">
-            <FontAwesomeIcon icon={faGithub} className="link" />
-          </a>
-          <a href={project.demoLink} title="Demo">
-            <FontAwesomeIcon icon={faYoutube} className="link" />
-          </a>
-        </div>
-      </DetailContainer>
-      <PhotoContainer>
-        <img src={project.image} alt="temp" className="project-image" />
-      </PhotoContainer>
-    </ProjectContainer>
+    <>
+      <ProjectContainer>
+        <DetailContainer>
+          <span className="title">{project.name}</span>
+          <div className="description">{project.description}</div>
+          <StackContainer>
+            {project.techStack.map((stack, index) => (
+              <span key={index}>{stack}</span>
+            ))}
+          </StackContainer>
+          <div className="links">
+            <a href={project.githubLink} title="GitHub">
+              <FontAwesomeIcon icon={faGithub} className="link" />
+            </a>
+            <a href={project.demoLink} title="Demo">
+              <FontAwesomeIcon icon={faYoutube} className="link" />
+            </a>
+          </div>
+        </DetailContainer>
+        <PhotoContainer>
+          <img src={project.image} alt="temp" className="project-image" />
+        </PhotoContainer>
+      </ProjectContainer>
+    </>
   );
 };
 
@@ -160,7 +171,10 @@ const Projects = () => {
   return (
     <Section>
       {data.projects.map((project, index) => (
-        <Project project={project} key={index} />
+        <>
+          <Project project={project} key={index} />
+          <Seperator></Seperator>
+        </>
       ))}
     </Section>
   );

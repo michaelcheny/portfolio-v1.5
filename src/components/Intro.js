@@ -49,20 +49,23 @@ const IntroDeets = styled.div`
 
   .words {
     padding: 0.5rem 0;
-    color: ${(props) => props.theme.textPrimary};
+    /* color: ${(props) => props.theme.textPrimary}; */
     float: left;
   }
 
   p {
     font-size: 20px;
+    font-weight: 550;
+    color: ${({ theme }) => theme.textSecondary};
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 50px;
+    color: ${({ theme }) => theme.textAccent};
   }
 
   h3 {
-    /* font-weight: 500; */
+    
   }
 `;
 
