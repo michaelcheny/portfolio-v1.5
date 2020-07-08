@@ -4,12 +4,9 @@ import pic from "../assets/images/headshot.jpg";
 
 const Section = styled.section`
   height: 100vh;
-  background-color: ${(props) => props.theme.primary};
-  color: ${(props) => props.theme.textPrimary};
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 100ms;
 `;
 
 const IntroContainer = styled.div`
@@ -21,7 +18,7 @@ const IntroContainer = styled.div`
 
   border: 1px hotpink solid;
   max-width: 1024px;
-  height: 55%;
+  /* height: 55%; */
   width: 70%;
 `;
 
@@ -40,10 +37,11 @@ const ProfilePic = styled.div`
 
 const IntroDeets = styled.div`
   /* border: red 1px solid; */
-  height: 50%;
+  /* height: 50%; */
   /* width: 70%; */
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
   margin-left: 5rem;
   padding-bottom: 3rem;
   /* align-items: center; */

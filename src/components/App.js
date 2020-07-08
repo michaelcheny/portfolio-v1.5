@@ -16,16 +16,14 @@ const App = () => {
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (
-    <>
-      <ThemeProvider theme={themeMode}>
-        <GlobalStyle />
-        <MenuToggle setShowMenu={setShowMenu} />
-        {showMenu && <Menu setShowMenu={setShowMenu} setTheme={themeToggler} theme={theme} />}
-        <Intro />
-        <Projects />
-        <Footer />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={themeMode}>
+      <GlobalStyle />
+      <MenuToggle setShowMenu={setShowMenu} />
+      {showMenu && <Menu setShowMenu={setShowMenu} setTheme={themeToggler} theme={theme} />}
+      <Intro />
+      <Projects />
+      <Footer />
+    </ThemeProvider>
   );
 };
 

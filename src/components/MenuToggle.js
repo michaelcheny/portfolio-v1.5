@@ -11,10 +11,10 @@ const Toggle = styled.button`
   top: 0;
   margin-top: 1rem;
   margin-right: 1.1rem;
-  background-color: ${(props) => props.theme.ternary};
+  background-color: ${(props) => props.theme.primary};
   color: ${(props) => props.theme.textPrimary};
+  transition: 200ms linear;
   border: none;
-  transition: 200ms;
   outline: none;
 
   &:hover {

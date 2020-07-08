@@ -6,13 +6,10 @@ import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const Section = styled.section`
   /* height: 100vh; */
-  background-color: ${(props) => props.theme.primary};
-  color: ${(props) => props.theme.textPrimary};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 100ms;
   /* border: 1px red solid; */
 
   @media (max-width: 900px) {
@@ -51,7 +48,7 @@ const DetailContainer = styled.div`
   .title {
     font-size: 2rem;
     font-weight: bold;
-    color: ${(props) => props.theme.textPrimary};
+    color: ${(props) => props.theme.textSecondary};
     padding-bottom: 1rem;
     /* display: none; */
     @media (max-width: 900px) {
@@ -73,7 +70,12 @@ const DetailContainer = styled.div`
     .link {
       transform: scale(1.5);
       margin-right: 1.5rem;
-      color: ${(props) => props.theme.textAccent};
+      color: ${({ theme }) => theme.textSecondary};
+      transition: 150ms linear;
+      &:hover {
+        color: ${(props) => props.theme.textAccent};
+        transform: scale(1.8);
+      }
     }
     @media (max-width: 900px) {
       margin-top: 0.9rem;
@@ -89,7 +91,7 @@ const StackContainer = styled.div`
   margin-top: 0.8rem;
   span {
     /* background-color: ${(props) => props.theme.ternary}; */
-    color: ${(props) => props.theme.textAccent2};
+    color: ${(props) => props.theme.textSecondary};
     /* padding: 5px 10px; */
     font-size: 15px;
     border-radius: 3px;
@@ -110,7 +112,7 @@ const PhotoContainer = styled.div`
   .project-image {
     object-fit: scale-down;
     max-width: 100%;
-    max-height: auto;
+    /* max-height: auto; */
     @media (max-width: 900px) {
       /* min-width: 300px; */
       transform: scale(1.25);

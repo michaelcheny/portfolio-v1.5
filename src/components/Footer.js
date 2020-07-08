@@ -12,9 +12,7 @@ import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${(props) => props.theme.primary};
   padding: 2rem;
-  transition: 100ms;
 `;
 
 const SocialContainer = styled.div`
@@ -34,7 +32,7 @@ const Item = styled.a`
   display: inline-block;
   margin: 0 1rem;
   color: ${(props) => props.theme.textPrimary};
-  transition: transform 300ms;
+  transition: 150ms linear;
   &:hover {
     color: ${(props) => props.theme.textAccent};
     transform: scale(1.3);

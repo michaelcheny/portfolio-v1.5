@@ -49,10 +49,7 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
           src={gucciFlipFlop}
           alt="toggleTheme"
           style={{ height: "2rem" }}
-          onClick={() => {
-            console.log(theme);
-            theme === "dark" ? setTheme("dark") : setTheme("light");
-          }}
+          onClick={() => (theme === "dark" ? setTheme("dark") : setTheme("light"))}
         />
         <Link href={resume} target="_blank" rel="noopener noreferrer">
           Resume
