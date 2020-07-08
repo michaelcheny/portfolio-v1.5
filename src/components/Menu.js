@@ -41,7 +41,7 @@ const Link = styled.a`
 
 const Menu = ({ setShowMenu, setTheme, theme }) => {
   const outsideNode = useClickOutside(() => setShowMenu(false));
-  // const themes = ["theme1", "theme2", "theme3"];
+
   return (
     <MenuContainer>
       <InsideMenu ref={outsideNode}>
@@ -50,23 +50,10 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
           alt="toggleTheme"
           style={{ height: "2rem" }}
           onClick={() => {
-            setTheme((prev) => !prev);
-            localStorage.setItem("theme", theme);
+            console.log(theme);
+            theme === "dark" ? setTheme("dark") : setTheme("light");
           }}
         />
-        <div>
-          {/* {themes.map((theme) => (
-            <span
-              onClick={() => {
-                setTheme((prev) => !prev);
-                console.log(theme);
-                localStorage.setItem("theme", theme);
-              }}
-            >
-              {theme}
-            </span>
-          ))} */}
-        </div>
         <Link href={resume} target="_blank" rel="noopener noreferrer">
           Resume
         </Link>
