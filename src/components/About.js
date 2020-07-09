@@ -91,23 +91,15 @@ const About = () => {
             right?).
           </p>
         </Description>
-        <Skills>
+        {/* <Skills>
           <h2 className="title">Skills</h2>
           <SkillGrid>
-            {/* <li>JavaScript</li>
-            <li>React</li>
-            <li>Redux</li>
-            <li>Context API</li>
-            <li>Ruby</li>
-            <li>Ruby on Rails</li>
-            <li>Sql</li>
-            <li>HTML</li>
-            <li>CSS</li> */}
+            
             {skills.map((skill) => (
               <li>{skill}</li>
             ))}
           </SkillGrid>
-        </Skills>
+        </Skills> */}
       </AboutContainer>
     </AboutSection>
   );

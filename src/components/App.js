@@ -10,7 +10,8 @@ import { GlobalStyle } from "../globalstyles";
 import { darkTheme, lightTheme } from "../components/Themes";
 import { useDarkMode } from "../helpers/useDarkMode";
 import About from "./About";
-import Layout from "./Layout";
+// import Layout from "./Layout";
+import Skills from "./Skills";
 
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -22,11 +23,12 @@ const App = () => {
       <GlobalStyle />
       <MenuToggle setShowMenu={setShowMenu} />
       {showMenu && <Menu setShowMenu={setShowMenu} setTheme={themeToggler} theme={theme} />}
-      <Layout>
-        <Intro />
-        <About />
-        <Projects />
-      </Layout>
+      {/* <Layout> */}
+      <Intro />
+      <About />
+      <Skills />
+      <Projects />
+      {/* </Layout> */}
       <Footer />
     </ThemeProvider>
   );
