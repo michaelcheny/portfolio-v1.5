@@ -116,7 +116,7 @@ const PhotoContainer = styled.div`
     @media (max-width: 900px) {
       /* min-width: 300px; */
       transform: scale(1.25);
-      margin: 1rem;
+      /* margin: 1rem; */
     }
     /* &:hover {
       background-color: rgba(0, 0, 0, 0.5);

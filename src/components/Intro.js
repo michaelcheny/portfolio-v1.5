@@ -20,18 +20,28 @@ const IntroContainer = styled.div`
   max-width: 1024px;
   /* height: 55%; */
   width: 70%;
+  @media (max-width: 800px) {
+    width: auto;
+  }
 `;
 
 const ProfilePic = styled.div`
-  /* background: url(${pic}); */
-  /* object-fit: scale-down; */
+  display: flex;
+  justify-content: center;
   height: 50%;
-  img{
-    max-width:100%;
-    max-height:100%;
+  img {
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 100%;
     object-fit: cover;
     border: 3px ${({ theme }) => theme.textAccent} solid;
+    @media (max-width: 800px) {
+      /* margin: auto 0; */
+      /* align-self: center;
+      justify-self: center; */
+      width: 70%;
+      /* position: */
+    }
   }
 `;
 
