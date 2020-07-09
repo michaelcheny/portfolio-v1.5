@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { skills } from "../assets/data/data.json";
 
 const AboutSection = styled.section`
   height: 100vh;
@@ -16,6 +17,17 @@ const AboutContainer = styled.div`
   .title {
     font-size: 2rem;
     padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    ::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 300px;
+      background-color: ${({ theme }) => theme.textAccent2};
+      top: -5px;
+      margin-left: 20px;
+    }
   }
   @media (max-width: 900px) {
     flex-direction: column;
@@ -42,6 +54,8 @@ const Skills = styled.div`
   padding-left: 1rem;
   @media (max-width: 900px) {
     width: 100%;
+    padding-left: 0;
+    padding-top: 3rem;
   }
 `;
 
@@ -51,8 +65,8 @@ const SkillGrid = styled.ul`
   grid-template-columns: repeat(2, minmax(140px, 200px));
   li {
     ::before {
-      content: "► ";
-      font-size: 13px;
+      content: "⌁ ";
+      font-size: 20px;
       /* line-height: 2px; */
       margin-bottom: 3px;
     }
@@ -80,7 +94,7 @@ const About = () => {
         <Skills>
           <h2 className="title">Skills</h2>
           <SkillGrid>
-            <li>JavaScript</li>
+            {/* <li>JavaScript</li>
             <li>React</li>
             <li>Redux</li>
             <li>Context API</li>
@@ -88,7 +102,10 @@ const About = () => {
             <li>Ruby on Rails</li>
             <li>Sql</li>
             <li>HTML</li>
-            <li>CSS</li>
+            <li>CSS</li> */}
+            {skills.map((skill) => (
+              <li>{skill}</li>
+            ))}
           </SkillGrid>
         </Skills>
       </AboutContainer>

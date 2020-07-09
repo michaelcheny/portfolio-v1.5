@@ -40,5 +40,18 @@
       "githubLink": "https://github.com/michaelcheny/Floppy-Drop-Javascript-game",
       "demoLink": "https://youtu.be/Ya_F4OZHX0E"
     }
+  ],
+  "skills": [
+    "JavaScript (ES6+)",
+    "React",
+    "Redux",
+    "Context API",
+    "Ruby",
+    "Ruby on Rails",
+    "SQL",
+    "HTML",
+    "CSS",
+    "OOP",
+    "Socket.io"
   ]
 }
