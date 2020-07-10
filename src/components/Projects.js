@@ -140,36 +140,35 @@ const Seperator = styled.hr`
 
 const Project = ({ project }) => {
   return (
-    <Section id="projects">
-      <ProjectContainer>
-        <DetailContainer>
-          <span className="title">{project.name}</span>
-          <div className="description">{project.description}</div>
-          <StackContainer>
-            {project.techStack.map((stack, index) => (
-              <span key={index}>{stack}</span>
-            ))}
-          </StackContainer>
-          <div className="links">
-            <a href={project.githubLink} title="GitHub">
-              <FontAwesomeIcon icon={faGithub} className="link" />
-            </a>
-            <a href={project.demoLink} title="Demo">
-              <FontAwesomeIcon icon={faYoutube} className="link" />
-            </a>
-          </div>
-        </DetailContainer>
-        <PhotoContainer>
-          <img src={project.image} alt="temp" className="project-image" />
-        </PhotoContainer>
-      </ProjectContainer>
-    </Section>
+    <ProjectContainer>
+      <DetailContainer>
+        <span className="title">{project.name}</span>
+        <div className="description">{project.description}</div>
+        <StackContainer>
+          {project.techStack.map((stack, index) => (
+            <span key={index}>{stack}</span>
+          ))}
+        </StackContainer>
+        <div className="links">
+          <a href={project.githubLink} title="GitHub">
+            <FontAwesomeIcon icon={faGithub} className="link" />
+          </a>
+          <a href={project.demoLink} title="Demo">
+            <FontAwesomeIcon icon={faYoutube} className="link" />
+          </a>
+        </div>
+      </DetailContainer>
+      <PhotoContainer>
+        <img src={project.image} alt="temp" className="project-image" />
+      </PhotoContainer>
+    </ProjectContainer>
   );
 };
 
 const Projects = () => {
   return (
-    <Section>
+    <Section id="projects">
+      <h2 className="title">Projects</h2>
       {data.projects.map((project, index) => (
         <>
           <Project project={project} key={index} />
