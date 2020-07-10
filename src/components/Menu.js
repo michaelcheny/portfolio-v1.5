@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useClickOutside } from "../helpers/ClickOutsideHook";
 import gucciFlipFlop from "../assets/images/gucciFlipFlop.png";
 import resume from "../assets/resume/resume.pdf";
+import { animateScroll as scroll, Link as ScrollLink } from "react-scroll";
 
 const MenuContainer = styled.div`
   position: fixed;
@@ -51,6 +52,18 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
           style={{ height: "2rem" }}
           onClick={() => (theme === "dark" ? setTheme("dark") : setTheme("light"))}
         />
+        <ScrollLink to="about" smooth={true} duration={400}>
+          About
+        </ScrollLink>
+        <ScrollLink to="skills" smooth={true} duration={400}>
+          Skills
+        </ScrollLink>
+        <ScrollLink to="projects" smooth={true} duration={400}>
+          Projects
+        </ScrollLink>
+        <ScrollLink to="social" smooth={true} duration={400}>
+          Socials
+        </ScrollLink>
         <Link href={resume} target="_blank" rel="noopener noreferrer">
           Resume
         </Link>

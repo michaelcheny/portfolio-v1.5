@@ -48,7 +48,7 @@ const Description = styled.div`
 
 const About = () => {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <AboutContainer>
         <Description>
           <h2 className="title">About Me</h2>

@@ -140,7 +140,7 @@ const Seperator = styled.hr`
 
 const Project = ({ project }) => {
   return (
-    <>
+    <Section id="projects">
       <ProjectContainer>
         <DetailContainer>
           <span className="title">{project.name}</span>
@@ -163,7 +163,7 @@ const Project = ({ project }) => {
           <img src={project.image} alt="temp" className="project-image" />
         </PhotoContainer>
       </ProjectContainer>
-    </>
+    </Section>
   );
 };
 

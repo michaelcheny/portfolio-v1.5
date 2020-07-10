@@ -41,7 +41,7 @@ const Item = styled.a`
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer id="social">
       <SocialContainer>
         <Item href="mailto:michaelchengaming@gmail.com" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />

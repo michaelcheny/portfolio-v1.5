@@ -69,7 +69,7 @@ const SkillsContainer = styled.div`
 
 const Skills = () => {
   return (
-    <SkillsSection>
+    <SkillsSection id="skills">
       <SkillsContainer>
         <h2 className="title">Skills</h2>
         <ul>
