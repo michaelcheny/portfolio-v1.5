@@ -54,9 +54,9 @@ const SkillsContainer = styled.div`
         content: "⌁ ";
         font-size: 20px;
         /* line-height: 2px; */
-        margin-bottom: 3px;
+        margin-bottom: 2px;
       }
-      padding-bottom: 0.5rem;
+      padding-bottom: 5px;
     }
   }
 

@@ -16,7 +16,7 @@ const IntroContainer = styled.div`
   align-items: center;
   /* content */
 
-  border: 1px hotpink solid;
+  /* border: 1px hotpink solid; */
   max-width: 1024px;
   /* height: 55%; */
   width: 70%;
@@ -79,6 +79,29 @@ const IntroDeets = styled.div`
   }
 `;
 
+const Button = styled.button`
+  border: 1px solid ${({ theme }) => theme.textAccent};
+  background: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  width: 180px;
+  font-size: 20px;
+  /* font-weight: 600; */
+  transition: 200ms linear;
+  margin-top: 1rem;
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.textPrimary};
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.secondary};
+    cursor: pointer;
+    /* color: ${({ theme }) => theme.textAccent}; */
+    transform: scale(1.05)
+  }
+`;
+
 const Intro = () => {
   return (
     <Section id="intro">
@@ -90,6 +113,9 @@ const Intro = () => {
           <p className="words">Hello, my name is</p>
           <h2 className="words">Michael Chen.</h2>
           <h3 className="words">I convert words into magic through my keyboard.</h3>
+          <Button>
+            <a href="mailto:michaelchengaming@gmail.com">Get in Touch</a>
+          </Button>
         </IntroDeets>
       </IntroContainer>
     </Section>
