@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { useClickOutside } from "../helpers/ClickOutsideHook";
-import gucciFlipFlop from "../assets/images/gucciFlipFlop.png";
 import resume from "../assets/resume/resume.pdf";
-import { animateScroll as scroll, Link } from "react-scroll";
+import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
@@ -100,19 +99,14 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
             Socials
           </Link>
         </SectionLinks>
-        {/* <img
-          src={gucciFlipFlop}
-          alt="toggleTheme"
-          style={{ height: "2rem" }}
-          onClick={() => (theme === "dark" ? setTheme("dark") : setTheme("light"))}
-        /> */}
+
         <FontAwesomeIcon
           className={theme === "dark" ? "theme-dark btn" : "theme-light btn"}
           icon={faLightbulb}
           size="2x"
           onClick={() => (theme === "dark" ? setTheme("dark") : setTheme("light"))}
         />
-        {/* 🌞🕶️ */}
+
         <ResumeLink href={resume} target="_blank" rel="noopener noreferrer">
           Resume
         </ResumeLink>
