@@ -81,7 +81,7 @@ const IntroDeets = styled.div`
 
 const Intro = () => {
   return (
-    <Section>
+    <Section id="intro">
       <IntroContainer>
         <ProfilePic>
           <img src={pic} alt="profile pic" />

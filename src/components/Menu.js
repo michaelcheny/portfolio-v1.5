@@ -31,12 +31,23 @@ const InsideMenu = styled.div`
     color: orange;
   }
   .theme-dark {
-    color: black;
+    color: darkgrey;
   }
   .btn {
     &:hover {
       cursor: pointer;
       transform: scale(1.13);
+    }
+  }
+  .link {
+    padding: 5px 0;
+    padding-left: 1rem;
+    transition: 200ms linear;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      color: ${({ theme }) => theme.textAccent};
     }
   }
 
@@ -65,17 +76,6 @@ const SectionLinks = styled.div`
     font-weight: 400;
     padding-bottom: 5px;
   }
-
-  .link {
-    padding: 5px 0;
-    padding-left: 1rem;
-
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-      color: ${({ theme }) => theme.textAccent};
-    }
-  }
 `;
 
 const Menu = ({ setShowMenu, setTheme, theme }) => {
@@ -86,16 +86,19 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
       <InsideMenu ref={outsideNode}>
         <SectionLinks>
           <h3>Table of Contents</h3>
-          <Link className="link" to="about" smooth={true} duration={400}>
+          <Link className="link" to="intro" smooth duration={400}>
+            Intro
+          </Link>
+          <Link className="link" to="about" smooth duration={400}>
             About
           </Link>
-          <Link className="link" to="skills" smooth={true} duration={400}>
+          <Link className="link" to="skills" smooth duration={400}>
             Skills
           </Link>
-          <Link className="link" to="projects" smooth={true} duration={400}>
+          <Link className="link" to="projects" smooth duration={400}>
             Projects
           </Link>
-          <Link className="link" to="social" smooth={true} duration={400}>
+          <Link className="link" to="social" smooth duration={400}>
             Socials
           </Link>
         </SectionLinks>
@@ -107,7 +110,7 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
           onClick={() => (theme === "dark" ? setTheme("dark") : setTheme("light"))}
         />
 
-        <ResumeLink href={resume} target="_blank" rel="noopener noreferrer">
+        <ResumeLink className="link" href={resume} target="_blank" rel="noopener noreferrer">
           Resume
         </ResumeLink>
       </InsideMenu>
