@@ -64,27 +64,32 @@ const IntroDeets = styled.div`
   }
 
   p {
-    font-size: 20px;
-    font-weight: 550;
+    /* align-self: flex-end; */
+    /* margin-left: 1rem; */
+    font-size: 18px;
+    font-weight: 500;
     color: ${({ theme }) => theme.textSecondary};
   }
 
   h2 {
-    font-size: 50px;
+    font-size: 65px;
+    /* font-weight: 450; */
     color: ${({ theme }) => theme.textAccent};
+    
   }
 
   h3 {
-    
+    /* margin-left: 1rem; */
+
   }
 `;
 
 const Button = styled.button`
   border: 1px solid ${({ theme }) => theme.textAccent};
   background: none;
-  border-radius: 3px;
-  padding: 5px 10px;
-  width: 180px;
+  border-radius: 2px;
+  padding: 8px;
+  width: 140px;
   font-size: 20px;
   /* font-weight: 600; */
   transition: 200ms linear;
@@ -110,11 +115,12 @@ const Intro = () => {
           <img src={pic} alt="profile pic" />
         </ProfilePic>
         <IntroDeets>
-          <p className="words">Hello, my name is</p>
-          <h2 className="words">Michael Chen.</h2>
+          {/* <p className="words">Hello, my name is</p> */}
+          <h2 className="words">Michael Chen</h2>
+          <p className="words">Software Engineer | San Francisco, CA</p>
           <h3 className="words">I convert words into magic through my keyboard.</h3>
           <Button>
-            <a href="mailto:michaelchengaming@gmail.com">Get in Touch</a>
+            <a href="mailto:michaelchengaming@gmail.com">Let's Talk</a>
           </Button>
         </IntroDeets>
       </IntroContainer>

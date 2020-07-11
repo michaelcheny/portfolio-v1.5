@@ -23,7 +23,7 @@ const InsideMenu = styled.div`
   align-items: center;
   height: 30%;
   width: 40%;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: ${(props) => props.theme.secondary};
   transition: 200ms;
   /* text-decoration: none; */
@@ -64,8 +64,8 @@ const ResumeLink = styled.a`
   text-decoration: none;
   color: ${(props) => props.theme.textSecondary};
   transition: 200ms linear;
-  align-self: flex-end;
-  justify-self: flex-end;
+  /* align-self: flex-end;
+  justify-self: flex-end; */
   &:hover {
     transform: scale(1.05);
     color: ${(props) => props.theme.textAccent};
@@ -89,15 +89,13 @@ const OtherLinks = styled.div`
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
+  color: ${(props) => props.theme.textSecondary};
+
   border: 1px red solid;
   height: 70%;
-`;
-
-const Contacts = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-  text-decoration: none;
+  p {
+    transition: 200ms linear;
+  }
 `;
 
 const Menu = ({ setShowMenu, setTheme, theme }) => {
@@ -107,7 +105,7 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
     <MenuContainer>
       <InsideMenu ref={outsideNode}>
         <SectionLinks>
-          <h3>Jump to Section</h3>
+          <h3>Navigate</h3>
           <Link className="link" to="intro" smooth duration={400}>
             Intro
           </Link>
@@ -124,12 +122,12 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
             Socials
           </Link>
         </SectionLinks>
-        <Contacts>
+        {/* <Contacts>
           <h3>Get in Touch</h3>
           <a href="mailto:michaelchengaming@gmail.com" className="link">
             Email me
           </a>
-        </Contacts>
+        </Contacts> */}
         <OtherLinks>
           <p>Theme</p>
           <FontAwesomeIcon
