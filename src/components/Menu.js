@@ -13,7 +13,7 @@ const MenuContainer = styled.div`
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   transition: 200ms;
 `;
 
