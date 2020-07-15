@@ -13,10 +13,10 @@ const IntroContainer = styled.div`
   display: flex;
   flex-direction: column;
   /* justify-content: space-evenly; */
-  align-items: center;
+  /* align-items: center; */
   /* content */
 
-  /* border: 1px hotpink solid; */
+  border: 1px hotpink solid;
   max-width: 1024px;
   /* height: 55%; */
   width: 70%;
@@ -111,9 +111,9 @@ const Intro = () => {
   return (
     <Section id="intro">
       <IntroContainer>
-        <ProfilePic>
+        {/* <ProfilePic>
           <img src={pic} alt="profile pic" />
-        </ProfilePic>
+        </ProfilePic> */}
         <IntroDeets>
           {/* <p className="words">Hello, my name is</p> */}
           <h2 className="words">Michael Chen</h2>
