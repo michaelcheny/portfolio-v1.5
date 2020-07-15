@@ -19,7 +19,7 @@ const MenuContainer = styled.div`
 
 const InsideMenu = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: 30%;
   width: 40%;
@@ -38,19 +38,6 @@ const InsideMenu = styled.div`
     &:hover {
       cursor: pointer;
       transform: scale(1.13);
-    }
-  }
-  .link {
-    padding: 5px 0;
-    padding-left: 1rem;
-    transition: 200ms linear;
-    color: ${(props) => props.theme.textSecondary};
-    text-decoration: none;
-
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.05);
-      color: ${({ theme }) => theme.textAccent};
     }
   }
 
@@ -75,24 +62,51 @@ const ResumeLink = styled.a`
 const SectionLinks = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: ${(props) => props.theme.textSecondary};
-  border: 1px green solid;
+  /* border: 1px green solid; */
+  height: 100%;
+  width: 40%;
+  background-color: ${({ theme }) => theme.primary};
   transition: 200ms linear;
-  height: 70%;
+  /* height: 70%; */
   h3 {
     font-weight: 400;
     padding-bottom: 5px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    .link {
+      padding: 5px 0;
+      padding-left: 1rem;
+      transition: 200ms linear;
+      color: ${(props) => props.theme.textSecondary};
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        color: ${({ theme }) => theme.textAccent};
+      }
+    }
   }
 `;
 
 const OtherLinks = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60%;
   color: ${(props) => props.theme.textSecondary};
 
-  border: 1px red solid;
-  height: 70%;
+  /* border: 1px red solid; */
+  /* height: 70%; */
   p {
     transition: 200ms linear;
   }
@@ -105,22 +119,24 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
     <MenuContainer>
       <InsideMenu ref={outsideNode}>
         <SectionLinks>
-          <h3>Navigate</h3>
-          <Link className="link" to="intro" smooth duration={400}>
-            Intro
-          </Link>
-          <Link className="link" to="about" smooth duration={400}>
-            About
-          </Link>
-          <Link className="link" to="skills" smooth duration={400}>
-            Skills
-          </Link>
-          <Link className="link" to="projects" smooth duration={400}>
-            Projects
-          </Link>
-          <Link className="link" to="social" smooth duration={400}>
-            Socials
-          </Link>
+          <div>
+            <h3>Navigate</h3>
+            <Link className="link" to="intro" smooth duration={400}>
+              Intro
+            </Link>
+            <Link className="link" to="about" smooth duration={400}>
+              About
+            </Link>
+            <Link className="link" to="skills" smooth duration={400}>
+              Skills
+            </Link>
+            <Link className="link" to="projects" smooth duration={400}>
+              Projects
+            </Link>
+            <Link className="link" to="social" smooth duration={400}>
+              Socials
+            </Link>
+          </div>
         </SectionLinks>
         {/* <Contacts>
           <h3>Get in Touch</h3>
