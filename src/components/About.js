@@ -12,7 +12,7 @@ const AboutContainer = styled.div`
   display: flex;
   max-width: 1600px;
   justify-content: space-between;
-  border: 1px pink solid;
+  /* border: 1px pink solid; */
   width: 85%;
   .title {
     font-size: 2rem;
@@ -48,30 +48,28 @@ const Description = styled.div`
   }
 `;
 
-const PersonalInterest = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+// const PersonalInterest = styled.div`
+//   display: flex;
+//   flex-direction: column;
+// `;
 
 const ProfilePic = styled.div`
   display: flex;
   justify-content: center;
   /* height: 50%; */
   width: 45%;
-  border: red 1px solid;
+  /* border: red 1px solid; */
+  @media (max-width: 800px) {
+    width: 60%;
+    align-self: center;
+    padding-top: 3rem;
+  }
   img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 100%;
     object-fit: cover;
     border: 3px ${({ theme }) => theme.textAccent} solid;
-    @media (max-width: 800px) {
-      /* margin: auto 0; */
-      /* align-self: center;
-      justify-self: center; */
-      width: 70%;
-      /* position: */
-    }
   }
 `;
 
