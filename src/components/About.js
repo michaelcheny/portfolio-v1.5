@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import pic from "../assets/images/headshot.jpg";
 
 const AboutSection = styled.section`
   height: 100vh;
@@ -9,9 +10,9 @@ const AboutSection = styled.section`
 `;
 const AboutContainer = styled.div`
   display: flex;
-  max-width: 1024px;
+  max-width: 1600px;
   justify-content: space-between;
-  /* border: 1px pink solid; */
+  border: 1px pink solid;
   width: 85%;
   .title {
     font-size: 2rem;
@@ -36,6 +37,7 @@ const Description = styled.div`
   /* border: 1px pink solid; */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 55%;
   padding-right: 1rem;
   p {
@@ -43,6 +45,33 @@ const Description = styled.div`
   }
   @media (max-width: 800px) {
     width: 100%;
+  }
+`;
+
+const PersonalInterest = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ProfilePic = styled.div`
+  display: flex;
+  justify-content: center;
+  /* height: 50%; */
+  width: 45%;
+  border: red 1px solid;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 3px ${({ theme }) => theme.textAccent} solid;
+    @media (max-width: 800px) {
+      /* margin: auto 0; */
+      /* align-self: center;
+      justify-self: center; */
+      width: 70%;
+      /* position: */
+    }
   }
 `;
 
@@ -63,6 +92,13 @@ const About = () => {
             right?).
           </p>
         </Description>
+        {/* <PersonalInterest>
+          <h2 className="title">Personal Interests</h2>
+          <p>jkdsfhasjhf</p>
+        </PersonalInterest> */}
+        <ProfilePic>
+          <img src={pic} alt="profile pic" />
+        </ProfilePic>
       </AboutContainer>
     </AboutSection>
   );
