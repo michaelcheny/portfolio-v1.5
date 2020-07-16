@@ -79,16 +79,22 @@ const About = () => {
       <AboutContainer>
         <Description>
           <h2 className="title">About Me</h2>
-          <p>My name is Michael Chen and I'm a software engineer based in San Francisco, Ca.</p>
-          <p>I am a Flatiron School alumni who loves to build things for the web. I specialize in</p>
-          <p>
-            When I'm not clacking away on my keyboard, I can be found reading countless tech articles,
-            learning new skills, or playing with my dog.
-          </p>
-          <p>
-            Hobbies include: Fishing, powerlifting, video games, cooking, and keyboards(I know.. weird
-            right?).
-          </p>
+          <p>Hi my name is Michael Chen. </p>
+          <p>I'm a software engineer based in San Francisco, Ca.</p>
+
+          <p>I am a Flatiron School alumni who loves to build things for the web. </p>
+          <p>When I'm not clacking away on my keyboard, I enjoy doing any of the following:</p>
+          <ul>
+            <li>reading tech articles</li>
+            <li>learning new skills</li>
+            <li>playing with my dog</li>
+            <li>Fishing</li>
+            <li>powerlifting</li>
+            <li>video games</li>
+            <li>cooking</li>
+            <li>keyboards(I know.. weird right?)</li>
+          </ul>
+          <p></p>
         </Description>
         {/* <PersonalInterest>
           <h2 className="title">Personal Interests</h2>
