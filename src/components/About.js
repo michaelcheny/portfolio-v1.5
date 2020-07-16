@@ -47,6 +47,24 @@ const Description = styled.div`
   @media (max-width: 800px) {
     width: 100%;
   }
+
+  ul {
+    border: 1px cyan solid;
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(2, minmax(140px, 250px));
+    /* margin: 0 2rem; */
+    padding-left: 2rem;
+    li {
+      ::before {
+        content: "⌁ ";
+        font-size: 20px;
+        /* line-height: 2px; */
+        margin-bottom: 2px;
+      }
+      padding-bottom: 5px;
+    }
+  }
 `;
 
 // const PersonalInterest = styled.div`
