@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import pic from "../assets/images/headshot.jpg";
+import { hobbies } from "../assets/data/data.json";
 
 const AboutSection = styled.section`
   height: 100vh;
@@ -85,14 +86,9 @@ const About = () => {
           <p>I am a Flatiron School alumni who loves to build things for the web. </p>
           <p>When I'm not clacking away on my keyboard, I enjoy doing any of the following:</p>
           <ul>
-            <li>reading tech articles</li>
-            <li>learning new skills</li>
-            <li>playing with my dog</li>
-            <li>Fishing</li>
-            <li>powerlifting</li>
-            <li>video games</li>
-            <li>cooking</li>
-            <li>keyboards(I know.. weird right?)</li>
+            {hobbies.map((hobby, index) => (
+              <li key={index}>{hobby}</li>
+            ))}
           </ul>
           <p></p>
         </Description>
