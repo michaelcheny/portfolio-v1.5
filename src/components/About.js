@@ -11,13 +11,28 @@ const AboutSection = styled.section`
 `;
 const AboutContainer = styled.div`
   display: flex;
-  max-width: 1600px;
-  justify-content: space-between;
+  max-width: 1300px;
+  justify-content: space-evenly;
   /* border: 1px pink solid; */
   width: 85%;
   .title {
     font-size: 2rem;
     padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    ::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 300px;
+      background-color: ${({ theme }) => theme.textAccent2};
+      top: -5px;
+      margin-left: 20px;
+    }
+  }
+  .small-title {
+    font-size: 22px;
+    padding: 2rem 0 1rem 0;
     display: flex;
     align-items: center;
     ::after {
@@ -49,11 +64,11 @@ const Description = styled.div`
   }
 
   ul {
-    border: 1px cyan solid;
+    /* border: 1px cyan solid; */
     display: grid;
     list-style: none;
     grid-template-columns: repeat(2, minmax(140px, 250px));
-    /* margin: 0 2rem; */
+    margin-top: 0.6rem;
     padding-left: 2rem;
     li {
       ::before {
@@ -66,11 +81,6 @@ const Description = styled.div`
     }
   }
 `;
-
-// const PersonalInterest = styled.div`
-//   display: flex;
-//   flex-direction: column;
-// `;
 
 const ProfilePic = styled.div`
   display: flex;
@@ -102,18 +112,16 @@ const About = () => {
           <p>I'm a software engineer based in San Francisco, Ca.</p>
 
           <p>I am a Flatiron School alumni who loves to build things for the web. </p>
+          {/* <PersonalInterest> */}
+          <h3 className="small-title">Personal Interests</h3>
           <p>When I'm not clacking away on my keyboard, I enjoy doing any of the following:</p>
           <ul>
             {hobbies.map((hobby, index) => (
               <li key={index}>{hobby}</li>
             ))}
           </ul>
-          <p></p>
         </Description>
-        {/* <PersonalInterest>
-          <h2 className="title">Personal Interests</h2>
-          <p>jkdsfhasjhf</p>
-        </PersonalInterest> */}
+
         <ProfilePic>
           <img src={pic} alt="profile pic" />
         </ProfilePic>

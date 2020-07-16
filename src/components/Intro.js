@@ -23,7 +23,6 @@ const IntroDeets = styled.div`
   /* border: red 1px solid; */
   display: flex;
   flex-direction: column;
-
   padding-bottom: 3rem;
   justify-content: center;
 
