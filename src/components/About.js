@@ -85,7 +85,7 @@ const Description = styled.div`
 const ProfilePic = styled.div`
   display: flex;
   justify-content: center;
-  /* height: 50%; */
+  height: 50%;
   width: 45%;
   /* border: red 1px solid; */
   @media (max-width: 800px) {
@@ -97,7 +97,7 @@ const ProfilePic = styled.div`
     max-width: 100%;
     max-height: 100%;
     border-radius: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
     border: 3px ${({ theme }) => theme.textAccent} solid;
   }
 `;

@@ -23,7 +23,7 @@ const ProjectContainer = styled.div`
   margin: 2.5rem 0;
   /* border: blue 1px solid; */
   width: 70vw;
-  max-width: 1024px;
+  max-width: 1200px;
   /* height: 40vh; */
 
   @media (max-width: 900px) {
@@ -105,17 +105,19 @@ const StackContainer = styled.div`
 
 const PhotoContainer = styled.div`
   width: 50%;
-  /* border: 1px red solid; */
-  float: right;
+  border: 1px red solid;
+  /* float: right; */
+  align-self: center;
   display: flex;
   justify-content: center;
   .project-image {
-    object-fit: scale-down;
-    max-width: 100%;
+    object-fit: cover;
+    /* max-width: 100%; */
+    max-width: 400px;
     /* max-height: auto; */
     @media (max-width: 900px) {
       /* min-width: 300px; */
-      transform: scale(1.25);
+      /* transform: scale(1.25); */
       /* margin: 1rem; */
     }
     /* &:hover {
