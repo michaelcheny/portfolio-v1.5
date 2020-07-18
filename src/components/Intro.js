@@ -51,7 +51,7 @@ const IntroDeets = styled.div`
 `;
 
 const Button = styled.button`
-  border: 1px solid ${({ theme }) => theme.accent};
+  border: 1px solid ${({ theme }) => theme.textSecondary};
   border-radius: 2px;
   padding: 1rem 2rem;
   /* width: 140px; */
@@ -69,14 +69,14 @@ const Button = styled.button`
   }
 
   &:hover {
-    border: 1px solid ${({ theme }) => theme.textSecondary};
+    border: 1px solid ${({ theme }) => theme.secondary};
     background-color: ${({ theme }) => theme.accent};
     cursor: pointer;
     /* color: ${({ theme }) => theme.accent}; */
     transform: scale(1.05);
     a{
 
-    color: ${({ theme }) => theme.textSecondary};
+    color: ${({ theme }) => theme.secondary};
     }
   }
 `;

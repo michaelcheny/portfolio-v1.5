@@ -107,25 +107,27 @@ const OtherLinks = styled.div`
 const Menu = ({ setShowMenu, setTheme, theme }) => {
   const outsideNode = useClickOutside(() => setShowMenu(false));
 
+  const handleClickNav = () => setShowMenu(false);
+
   return (
     <MenuContainer>
       <InsideMenu ref={outsideNode}>
         <SectionLinks>
           <div>
             <h3>Navigate</h3>
-            <Link className="link" to="intro" smooth duration={400}>
+            <Link className="link" to="intro" smooth duration={400} onClick={handleClickNav}>
               Intro
             </Link>
-            <Link className="link" to="about" smooth duration={400}>
+            <Link className="link" to="about" smooth duration={400} onClick={handleClickNav}>
               About
             </Link>
-            <Link className="link" to="skills" smooth duration={400}>
+            <Link className="link" to="skills" smooth duration={400} onClick={handleClickNav}>
               Skills
             </Link>
-            <Link className="link" to="projects" smooth duration={400}>
+            <Link className="link" to="projects" smooth duration={400} onClick={handleClickNav}>
               Projects
             </Link>
-            <Link className="link" to="social" smooth duration={400}>
+            <Link className="link" to="social" smooth duration={400} onClick={handleClickNav}>
               Socials
             </Link>
           </div>

@@ -11,7 +11,7 @@
     {
       "name": "Floppy Drop",
       "image": "https://media.giphy.com/media/QXUAnCDqjtVOxYB0Q3/giphy.gif",
-      "description": "Interactive browser game where player collide with falling objects to earn points.",
+      "description": "Interactive browser game where player collide with falling objects to earn points. Drawl contact for the easy points, avoid charges, referees help the most.",
       "techStack": ["JavaScript", "HTML5 Canvas", "Ruby", "Ruby on Rails", "Postgresql"],
       "githubLink": "https://github.com/michaelcheny/Floppy-Drop-Javascript-game",
       "demoLink": "https://youtu.be/Ya_F4OZHX0E"
@@ -19,7 +19,7 @@
     {
       "name": "Real Life RPG",
       "image": "https://cdn4.iconfinder.com/data/icons/documents-letters-and-stationery/400/doc-14-512.png",
-      "description": "Gamified task manager/goal tracker. Level up real life skills by completing activities.",
+      "description": "Gamified task manager/goal tracker. Level up real life skills by completing activities and reaching your goals.",
       "techStack": ["Ruby", "Ruby on Rails", "mySql", "OAuth"],
       "githubLink": "https://github.com/michaelcheny/Real-Life-RPG-Rails-Project",
       "demoLink": "https://youtu.be/wqGUY1FIEdw"
