@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "LFG Collab",
-      "image": "http://www.a1carpet-to.com/wp-content/uploads/2015/08/600x400.png",
+      "image": "https://media.giphy.com/media/LM90JPKLqzOFMl23qL/giphy.gif",
       "description": "An online project hub for users to collaborate on projects together. Host your own room or browse the project bulletin for a project you want to be a part of. Collaborate in real-time.",
       "techStack": ["React", "Redux", "Socket.io", "Ruby", "Ruby on Rails", "Postgresql"],
       "githubLink": "https://github.com/michaelcheny/LFG-Collab-Front-End",
@@ -10,7 +10,7 @@
     },
     {
       "name": "Floppy Drop",
-      "image": "http://www.a1carpet-to.com/wp-content/uploads/2015/08/600x400.png",
+      "image": "https://media.giphy.com/media/QXUAnCDqjtVOxYB0Q3/giphy.gif",
       "description": "Interactive browser game where player collide with falling objects to earn points.",
       "techStack": ["JavaScript", "HTML5 Canvas", "Ruby", "Ruby on Rails", "Postgresql"],
       "githubLink": "https://github.com/michaelcheny/Floppy-Drop-Javascript-game",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Real Life RPG",
-      "image": "http://www.a1carpet-to.com/wp-content/uploads/2015/08/600x400.png",
+      "image": "https://cdn4.iconfinder.com/data/icons/documents-letters-and-stationery/400/doc-14-512.png",
       "description": "Gamified task manager/goal tracker. Level up real life skills by completing activities.",
       "techStack": ["Ruby", "Ruby on Rails", "mySql", "OAuth"],
       "githubLink": "https://github.com/michaelcheny/Real-Life-RPG-Rails-Project",
@@ -26,7 +26,7 @@
     },
     {
       "name": "Health-Track-O-Bot 3000",
-      "image": "http://www.a1carpet-to.com/wp-content/uploads/2015/08/600x400.png",
+      "image": "https://cdn4.iconfinder.com/data/icons/documents-letters-and-stationery/400/doc-14-512.png",
       "description": "Streamlined health tracker. Enter health stat, track meals and workouts, receive personalized feedback.",
       "techStack": ["Ruby", "Sinatra", "mySql", "Bcrypt", "OAuth"],
       "githubLink": "https://github.com/michaelcheny/The-Health-Track-O-Bot-3000-built-with-Sinatra-",
@@ -34,7 +34,7 @@
     },
     {
       "name": "Heathly Recipes Gem",
-      "image": "http://www.a1carpet-to.com/wp-content/uploads/2015/08/600x400.png",
+      "image": "https://cdn4.iconfinder.com/data/icons/documents-letters-and-stationery/400/doc-14-512.png",
       "description": "Ruby gem that scrapes the web for over 500 healthy recipes. Browse recipe by category, ingredients, or portion size.",
       "techStack": ["JavaScript", "HTML5 Canvas", "Ruby", "Ruby on Rails", "Postgresql"],
       "githubLink": "https://github.com/michaelcheny/Floppy-Drop-Javascript-game",
