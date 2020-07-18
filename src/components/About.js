@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { BulletList } from "../globalstyles";
 import pic from "../assets/images/headshot.jpg";
 import { hobbies } from "../assets/data/data.json";
 
 const AboutSection = styled.section`
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,6 @@ const AboutContainer = styled.div`
   display: flex;
   max-width: 1300px;
   justify-content: space-evenly;
-  /* border: 1px pink solid; */
   margin: 20vh 0;
   width: 85%;
   .title {
@@ -35,7 +34,6 @@ const AboutContainer = styled.div`
   }
 `;
 const Description = styled.div`
-  /* border: 1px pink solid; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,23 +53,6 @@ const Description = styled.div`
     width: 100%;
   }
 
-  ul {
-    /* border: 1px cyan solid; */
-    display: grid;
-    list-style: none;
-    grid-template-columns: repeat(2, minmax(140px, 250px));
-    margin-top: 0.6rem;
-    padding-left: 2rem;
-    li {
-      ::before {
-        content: "⌁ ";
-        font-size: 20px;
-        /* line-height: 2px; */
-        margin-bottom: 2px;
-      }
-      padding-bottom: 5px;
-    }
-  }
 `;
 
 const ProfilePic = styled.div`
@@ -79,7 +60,6 @@ const ProfilePic = styled.div`
   justify-content: center;
   height: 50%;
   width: 45%;
-  /* border: red 1px solid; */
   @media (max-width: 800px) {
     width: 60%;
     align-self: center;
@@ -100,18 +80,16 @@ const About = () => {
       <AboutContainer data-aos="fade-up">
         <Description>
           <h2 className="title tailing-divider">About Me</h2>
-          {/* <div className="description"> */}
           <p>Hi my name is Michael Chen. </p>
           <p>I'm a software engineer based in San Francisco, Ca.</p>
           <p>I am a Flatiron School alumni who loves to build things for the web. </p>
-          {/* </div> */}
           <h3 className="small-title tailing-divider">Personal Interests</h3>
           <p>When I'm not clacking away on my keyboard, I enjoy doing any of the following:</p>
-          <ul>
+          <BulletList>
             {hobbies.map((hobby, index) => (
               <li key={index}>{hobby}</li>
             ))}
-          </ul>
+          </BulletList>
         </Description>
 
         <ProfilePic>

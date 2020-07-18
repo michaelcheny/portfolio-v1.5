@@ -69,8 +69,6 @@ export const GlobalStyle = createGlobalStyle`
 
   h2 {
     font-size: 2rem;
-    display: flex;
-    align-items: center;
     color: ${({ theme }) => theme.textSecondary};
     font-family: 'Merriweather-Light'
   }
@@ -84,15 +82,29 @@ export const GlobalStyle = createGlobalStyle`
 
   `;
 
-export const Item = styled.a`
+export const Icon = styled.a`
   display: inline-block;
   margin: 0 0.5rem;
   color: ${(props) => props.theme.textPrimary};
   transition: 150ms linear;
-  .icon {
-    &:hover {
-      color: ${(props) => props.theme.accent};
-      transform: scale(1.05);
+  &:hover {
+    color: ${(props) => props.theme.accent};
+    transform: scale(1.05);
+  }
+`;
+
+export const BulletList = styled.ul`
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(2, minmax(140px, 250px));
+  margin-top: 0.6rem;
+  padding-left: 2rem;
+  li {
+    ::before {
+      content: "⌁ ";
+      font-size: 20px;
+      margin-bottom: 2px;
     }
+    padding-bottom: 5px;
   }
 `;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { BulletList } from "../globalstyles";
 import { skills } from "../assets/data/data.json";
 
 const SkillsSection = styled.div`
@@ -43,24 +44,6 @@ const SkillsContainer = styled.div`
     }
   /* } */
 
-  ul {
-    /* border: 1px cyan solid; */
-    display: grid;
-    list-style: none;
-    grid-template-columns: repeat(2, minmax(140px, 250px));
-    /* margin: 0 2rem; */
-    padding-left: 2rem;
-    li {
-      ::before {
-        content: "⌁ ";
-        font-size: 20px;
-        /* line-height: 2px; */
-        margin-bottom: 2px;
-      }
-      padding-bottom: 5px;
-    }
-  }
-
   @media (max-width: 900px) {
     /* width: 100%; */
     padding-left: 0;
@@ -74,11 +57,11 @@ const Skills = () => {
       <SkillsContainer data-aos="fade-up">
         <h2 className="header">Technical Skills</h2>
         <div className="divider"></div>
-        <ul>
+        <BulletList>
           {skills.map((skill) => (
             <li>{skill}</li>
           ))}
-        </ul>
+        </BulletList>
       </SkillsContainer>
     </SkillsSection>
   );

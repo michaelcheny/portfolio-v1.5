@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Item } from "../globalstyles";
-import { useClickOutside } from "../helpers/ClickOutsideHook";
+import { Icon } from "../globalstyles";
+import { useClickOutside } from "../helpers/useClickOutside";
 import resume from "../assets/resume/resume.pdf";
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLightbulb, faEnvelopeSquare, faFile } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb, faEnvelopeSquare, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import {
   faLinkedin,
   faGithubSquare,
@@ -61,16 +61,9 @@ const SectionLinks = styled.div`
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.textSecondary};
-  /* border: 1px green solid; */
   height: 100%;
   width: 40%;
   background-color: ${({ theme }) => theme.secondary};
-  transition: 200ms linear;
-  /* height: 70%; */
-  h3 {
-    font-weight: 400;
-    padding-bottom: 5px;
-  }
 
   div {
     display: flex;
@@ -137,50 +130,12 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
             </Link>
           </div>
         </SectionLinks>
-        {/* <Contacts>
-          <h3>Get in Touch</h3>
-          <a href="mailto:michaelchengaming@gmail.com" className="link">
-            Email me
-          </a>
-        </Contacts> */}
-        <OtherLinks>
-          <h3>Contacts</h3>
-          <div className="container">
-            <Item href="mailto:michaelchengaming@gmail.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" className="icon" />{" "}
-              {/* michaelchengaming@gmail.com */}
-            </Item>
-            <Item
-              href="https://www.linkedin.com/in/michaelchen13/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedin} size="2x" className="icon" />{" "}
-              {/* linkedin.com/in/michaelchen13/ */}
-            </Item>
-            <Item href="https://github.com/michaelcheny" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faGithubSquare} size="2x" className="icon" />
-              {/* github.com/michaelcheny */}
-            </Item>
-            <Item
-              href="https://medium.com/@michaelychen"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon"
-            >
-              <FontAwesomeIcon icon={faMedium} size="2x" className="icon" />
-              {/* medium.com/@michaelychen */}
-            </Item>
-            <Item
-              href="https://www.youtube.com/channel/UCsVPeLiZClEYtyPHfweRniw?view_as=subscriber"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faYoutubeSquare} size="2x" className="icon" />
-              {/* youtube */}
-            </Item>
-          </div>
 
+        <OtherLinks>
+          <h3>Resume</h3>
+          <Icon href={resume} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faFilePdf} size="2x" />
+          </Icon>
           <h3>Theme</h3>
           <FontAwesomeIcon
             className={theme === "dark" ? "theme-dark btn" : "theme-light btn"}
@@ -188,11 +143,37 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
             size="2x"
             onClick={() => (theme === "dark" ? setTheme("dark") : setTheme("light"))}
           />
-
-          <h3>Resume</h3>
-          <Item href={resume} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faFile} size="2x" className="icon" />{" "}
-          </Item>
+          <h3>Get In Touch</h3>
+          <div className="container">
+            <Icon href="mailto:michaelchengaming@gmail.com" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />
+            </Icon>
+            <Icon
+              href="https://www.linkedin.com/in/michaelchen13/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+            </Icon>
+            <Icon href="https://github.com/michaelcheny" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faGithubSquare} size="2x" />
+            </Icon>
+            <Icon
+              href="https://medium.com/@michaelychen"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon"
+            >
+              <FontAwesomeIcon icon={faMedium} size="2x" />
+            </Icon>
+            <Icon
+              href="https://www.youtube.com/channel/UCsVPeLiZClEYtyPHfweRniw?view_as=subscriber"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faYoutubeSquare} size="2x" />
+            </Icon>
+          </div>
         </OtherLinks>
       </InsideMenu>
     </MenuContainer>

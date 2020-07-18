@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Icon } from "../globalstyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
@@ -7,7 +8,7 @@ import {
   faMedium,
   faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelopeSquare, faFile } from "@fortawesome/free-solid-svg-icons";
 
 const FooterContainer = styled.div`
   display: flex;
@@ -28,44 +29,44 @@ const NameContainer = styled.div`
   color: ${(props) => props.theme.textPrimary};
 `;
 
-const Item = styled.a`
-  display: inline-block;
-  margin: 0 1rem;
-  color: ${(props) => props.theme.textPrimary};
-  transition: 150ms linear;
-  &:hover {
-    color: ${(props) => props.theme.accent};
-    transform: scale(1.3);
-  }
-`;
+// const Item = styled.a`
+//   display: inline-block;
+//   margin: 0 1rem;
+//   color: ${(props) => props.theme.textPrimary};
+//   transition: 150ms linear;
+//   &:hover {
+//     color: ${(props) => props.theme.accent};
+//     transform: scale(1.3);
+//   }
+// `;
 
 const Footer = () => {
   return (
     <FooterContainer id="social" data-aos="fade-up">
       <SocialContainer>
-        <Item href="mailto:michaelchengaming@gmail.com" target="_blank" rel="noopener noreferrer">
+        <Icon href="mailto:michaelchengaming@gmail.com" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />
-        </Item>
-        <Item
+        </Icon>
+        <Icon
           href="https://www.linkedin.com/in/michaelchen13/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
-        </Item>
-        <Item href="https://github.com/michaelcheny" target="_blank" rel="noopener noreferrer">
+        </Icon>
+        <Icon href="https://github.com/michaelcheny" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithubSquare} size="2x" />
-        </Item>
-        <Item href="https://medium.com/@michaelychen" target="_blank" rel="noopener noreferrer">
+        </Icon>
+        <Icon href="https://medium.com/@michaelychen" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faMedium} size="2x" />
-        </Item>
-        <Item
+        </Icon>
+        <Icon
           href="https://www.youtube.com/channel/UCsVPeLiZClEYtyPHfweRniw?view_as=subscriber"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FontAwesomeIcon icon={faYoutubeSquare} size="2x" />
-        </Item>
+        </Icon>
       </SocialContainer>
       <NameContainer>Built by Michael Chen</NameContainer>
     </FooterContainer>
