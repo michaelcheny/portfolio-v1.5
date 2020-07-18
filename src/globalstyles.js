@@ -25,4 +25,26 @@ export const GlobalStyle = createGlobalStyle`
   p {
     line-height: 125%;
   }
+
+  .divider {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: ${({ theme }) => theme.textAccent};
+    margin: 0.5rem 1rem;
+    width: 300px;
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding-bottom: .3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .header {
+    color: ${({ theme }) => theme.textSecondary};
+
+  }
   `;

@@ -34,18 +34,18 @@ const IntroDeets = styled.div`
     align-self: center;
   }
 
-  .divider {
+  .intro-divider {
     content: "";
     display: block;
     height: 2px;
-    background-color: ${({ theme }) => theme.textAccent2};
+    background-color: ${({ theme }) => theme.textAccent};
     margin: 0.5rem 1rem;
   }
 
   h2 {
     font-size: 80px;
     font-weight: 900;
-    color: ${({ theme }) => theme.textAccent};
+    color: ${({ theme }) => theme.textSecondary};
   }
 
   h3 {
@@ -90,7 +90,7 @@ const Intro = () => {
         <IntroDeets>
           {/* <p className="words">Hello, my name is</p> */}
           <h2>Michael Chen</h2>
-          <div className="divider"></div>
+          <div className="intro-divider"></div>
           <p>Software Engineer | San Francisco, CA</p>
           {/* <h3>I convert words into magic through my keyboard.</h3> */}
           <Button>

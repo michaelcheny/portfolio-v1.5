@@ -15,6 +15,7 @@ const MenuContainer = styled.div`
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
   transition: 200ms;
+  z-index: 5;
 `;
 
 const InsideMenu = styled.div`

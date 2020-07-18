@@ -7,7 +7,7 @@ import Projects from "./Projects";
 import Footer from "./Footer";
 import Menu from "./Menu";
 import { GlobalStyle } from "../globalstyles";
-import { darkTheme, lightTheme } from "../components/Themes";
+import { darkTheme, lightTheme, coffeeTheme } from "../components/Themes";
 import { useDarkMode } from "../helpers/useDarkMode";
 import About from "./About";
 // import Layout from "./Layout";
@@ -18,11 +18,13 @@ import "aos/dist/aos.css";
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [theme, themeToggler] = useDarkMode();
-  const themeMode = theme === "light" ? lightTheme : darkTheme;
+  const themeMode = theme === "light" ? coffeeTheme : darkTheme;
+  // const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   useEffect(() => {
     Aos.init({
-      duration: 800,
+      duration: 500,
+      easing: "ease-in-out",
     });
   }, []);
 

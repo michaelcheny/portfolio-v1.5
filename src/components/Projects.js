@@ -10,7 +10,7 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 30vh;
+  /* margin: 20vh 0; */
   /* border: 1px red solid; */
 
   @media (max-width: 900px) {
@@ -19,10 +19,23 @@ const Section = styled.section`
 `;
 
 const Wrapper = styled.div`
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /* height: 70%; */
+  margin: 20vh 0;
+
   /* margin-top: 20rem; */
+  /* .divider {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: ${({ theme }) => theme.textAccent};
+    margin: 0.5rem 1rem;
+    width: 300px;
+    margin-bottom: 2.5rem;
+  } */
 `;
 
 const ProjectContainer = styled.div`
@@ -56,7 +69,7 @@ const DetailContainer = styled.div`
   .title {
     font-size: 2rem;
     font-weight: bold;
-    color: ${(props) => props.theme.textSecondary};
+    /* color: ${(props) => props.theme.textSecondary}; */
     padding-bottom: 1rem;
     /* display: none; */
     @media (max-width: 900px) {
@@ -65,7 +78,7 @@ const DetailContainer = styled.div`
     }
   }
   .description {
-    color: ${(props) => props.theme.textSecondary};
+    /* color: ${(props) => props.theme.textSecondary}; */
     background-color: ${(props) => props.theme.secondary};
     padding: 1rem;
     margin: 0.8rem 0;
@@ -99,7 +112,7 @@ const StackContainer = styled.div`
   margin-top: 0.8rem;
   span {
     /* background-color: ${(props) => props.theme.ternary}; */
-    color: ${(props) => props.theme.textSecondary};
+    /* color: ${(props) => props.theme.textSecondary}; */
     /* padding: 5px 10px; */
     font-size: 15px;
     border-radius: 3px;
@@ -113,7 +126,7 @@ const StackContainer = styled.div`
 
 const PhotoContainer = styled.div`
   width: 50%;
-  border: 1px red solid;
+  /* border: 1px red solid; */
   /* float: right; */
   align-self: center;
   display: flex;
@@ -141,7 +154,7 @@ const PhotoContainer = styled.div`
 
 const Seperator = styled.hr`
   width: 70vw;
-  border: 0.5px ${({ theme }) => theme.secondary} solid;
+  border: 0.5px ${({ theme }) => theme.textAccent} solid;
 
   :last-child {
     display: none;
@@ -150,7 +163,7 @@ const Seperator = styled.hr`
 
 const Project = ({ project }) => {
   return (
-    <ProjectContainer data-aos="fade-up">
+    <ProjectContainer>
       <DetailContainer>
         <span className="title">{project.name}</span>
         <div className="description">{project.description}</div>
@@ -177,41 +190,49 @@ const Project = ({ project }) => {
 
 const Title = styled.h2`
   font-size: 2rem;
-  padding-bottom: 1rem;
   display: flex;
   align-items: center;
-  ::after {
+  padding-bottom: .3rem;
+  /* ::after {
     content: "";
     display: block;
     height: 1px;
     width: 300px;
-    background-color: ${({ theme }) => theme.textAccent2};
+    background-color: ${({ theme }) => theme.textAccent};
     top: -5px;
     margin-left: 20px;
+    @media (max-width: 800px) {
+      width: 150px;
+    }
   }
   ::before {
     content: "";
     display: block;
     height: 1px;
     width: 300px;
-    background-color: ${({ theme }) => theme.textAccent2};
+    background-color: ${({ theme }) => theme.textAccent};
     top: -5px;
     margin-right: 20px;
-  }
+    @media (max-width: 800px) {
+      width: 150px;
+    }
+  } */
+
 `;
 
 const Projects = () => {
   return (
     <Section id="projects">
-      {/* <Wrapper> */}
-      <Title data-aos="fade-up">Projects</Title>
-      {data.projects.map((project, index) => (
-        <>
-          <Project project={project} key={index} />
-          <Seperator></Seperator>
-        </>
-      ))}
-      {/* </Wrapper> */}
+      <Wrapper data-aos="fade-up">
+        <Title className="header">Projects</Title>
+        <div className="divider"></div>
+        {data.projects.map((project, index) => (
+          <>
+            <Project project={project} key={index} />
+            <Seperator></Seperator>
+          </>
+        ))}
+      </Wrapper>
     </Section>
   );
 };

@@ -4,7 +4,7 @@ import pic from "../assets/images/headshot.jpg";
 import { hobbies } from "../assets/data/data.json";
 
 const AboutSection = styled.section`
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +14,10 @@ const AboutContainer = styled.div`
   max-width: 1300px;
   justify-content: space-evenly;
   /* border: 1px pink solid; */
+  margin: 20vh 0;
   width: 85%;
   .title {
+    color: ${({ theme }) => theme.textSecondary};
     font-size: 2rem;
     padding-bottom: 1rem;
     display: flex;
@@ -25,7 +27,7 @@ const AboutContainer = styled.div`
       display: block;
       height: 1px;
       width: 300px;
-      background-color: ${({ theme }) => theme.textAccent2};
+      background-color: ${({ theme }) => theme.textAccent};
       top: -5px;
       margin-left: 20px;
     }
@@ -35,12 +37,13 @@ const AboutContainer = styled.div`
     padding: 2rem 0 1rem 0;
     display: flex;
     align-items: center;
+    color: ${({ theme }) => theme.textSecondary};
     ::after {
       content: "";
       display: block;
       height: 1px;
       width: 300px;
-      background-color: ${({ theme }) => theme.textAccent2};
+      background-color: ${({ theme }) => theme.textAccent};
       top: -5px;
       margin-left: 20px;
     }
@@ -110,9 +113,7 @@ const About = () => {
           <h2 className="title">About Me</h2>
           <p>Hi my name is Michael Chen. </p>
           <p>I'm a software engineer based in San Francisco, Ca.</p>
-
           <p>I am a Flatiron School alumni who loves to build things for the web. </p>
-          {/* <PersonalInterest> */}
           <h3 className="small-title">Personal Interests</h3>
           <p>When I'm not clacking away on my keyboard, I enjoy doing any of the following:</p>
           <ul>
