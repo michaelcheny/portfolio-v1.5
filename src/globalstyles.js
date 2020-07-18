@@ -105,6 +105,6 @@ export const BulletList = styled.ul`
       font-size: 20px;
       margin-bottom: 2px;
     }
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
   }
 `;

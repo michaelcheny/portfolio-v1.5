@@ -25,10 +25,11 @@ const Wrapper = styled.div`
 
 const ProjectContainer = styled.div`
   display: flex;
-  width: 70vw;
+  width: 80vw;
   max-width: 1200px;
 
   @media (max-width: 800px) {
+    width: 90vw;
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
@@ -42,10 +43,8 @@ const DetailContainer = styled.div`
   max-width: 50%;
   justify-content: center;
   float: left;
-  /* border: 1px green solid; */
 
   .title {
-    /* margin-bottom: 1rem */
     font-size: 1.5rem;
     @media (max-width: 800px) {
       padding-top: 1.25rem;
@@ -83,19 +82,15 @@ const DetailContainer = styled.div`
 `;
 
 const StackContainer = styled.div`
-  /* margin-top: 0.8rem; */
   span {
-    /* background-color: ${(props) => props.theme.ternary}; */
-    /* color: ${(props) => props.theme.secondary}; */
-    /* padding: 5px 10px; */
     font-size: 15px;
     border-radius: 3px;
     margin-top: 0.8rem;
     margin-right: 1rem;
   }
-    @media (max-width: 800px) {
-      margin-top: 0.25rem;
-    }
+  @media (max-width: 800px) {
+    margin-top: 0.25rem;
+  }
 `;
 
 const PhotoContainer = styled.div`
@@ -103,30 +98,23 @@ const PhotoContainer = styled.div`
   align-self: center;
   display: flex;
   justify-content: center;
-  /* opacity: 0.2; */
-  /* z-index: 2; */
   position: relative;
   .project-image {
     object-fit: contain;
     max-width: 350px;
     @media (max-width: 800px) {
-      /* object-fit: contain; */
-
       max-width: 300px;
-      /* transform: scale(1.25); */
-      /* margin: 1rem; */
     }
   }
 
   @media (max-width: 800px) {
     max-width: 80%;
-    /* width: 500px; */
-    /* max-height: auto; */
   }
 `;
 
 const Seperator = styled.hr`
-  width: 70vw;
+  width: 80vw;
+  max-width: 1200px;
   border: 0.3px ${({ theme }) => theme.secondary} solid;
   margin: 2.5rem 0;
   :last-child {
@@ -138,7 +126,6 @@ const Project = ({ project }) => {
   return (
     <ProjectContainer>
       <DetailContainer>
-        {/* <span className="title">{project.name}</span> */}
         <h2 className="title">{project.name}</h2>
         <div className="description">{project.description}</div>
         <StackContainer>
@@ -166,7 +153,6 @@ const Projects = () => {
   return (
     <Section id="projects">
       <Wrapper data-aos="fade-up">
-        {/* <Title className="header">Projects</Title> */}
         <h2>Projects</h2>
         <div className="divider main-title"></div>
         {data.projects.map((project, index) => (
