@@ -34,7 +34,7 @@ const Item = styled.a`
   color: ${(props) => props.theme.textPrimary};
   transition: 150ms linear;
   &:hover {
-    color: ${(props) => props.theme.textAccent};
+    color: ${(props) => props.theme.accent};
     transform: scale(1.3);
   }
 `;

@@ -22,15 +22,6 @@ const AboutContainer = styled.div`
     padding-bottom: 1rem;
     display: flex;
     align-items: center;
-    ::after {
-      content: "";
-      display: block;
-      height: 1px;
-      width: 300px;
-      background-color: ${({ theme }) => theme.textAccent};
-      top: -5px;
-      margin-left: 20px;
-    }
   }
   .small-title {
     font-size: 22px;
@@ -38,15 +29,6 @@ const AboutContainer = styled.div`
     display: flex;
     align-items: center;
     color: ${({ theme }) => theme.textSecondary};
-    ::after {
-      content: "";
-      display: block;
-      height: 1px;
-      width: 300px;
-      background-color: ${({ theme }) => theme.textAccent};
-      top: -5px;
-      margin-left: 20px;
-    }
   }
   @media (max-width: 800px) {
     flex-direction: column;
@@ -101,7 +83,7 @@ const ProfilePic = styled.div`
     max-height: 100%;
     border-radius: 100%;
     /* object-fit: cover; */
-    border: 3px ${({ theme }) => theme.textAccent} solid;
+    border: 2px ${({ theme }) => theme.accent} solid;
   }
 `;
 
@@ -110,11 +92,11 @@ const About = () => {
     <AboutSection id="about">
       <AboutContainer data-aos="fade-up">
         <Description>
-          <h2 className="title">About Me</h2>
+          <h2 className="title tailing-divider">About Me</h2>
           <p>Hi my name is Michael Chen. </p>
           <p>I'm a software engineer based in San Francisco, Ca.</p>
           <p>I am a Flatiron School alumni who loves to build things for the web. </p>
-          <h3 className="small-title">Personal Interests</h3>
+          <h3 className="small-title tailing-divider">Personal Interests</h3>
           <p>When I'm not clacking away on my keyboard, I enjoy doing any of the following:</p>
           <ul>
             {hobbies.map((hobby, index) => (

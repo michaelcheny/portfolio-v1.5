@@ -38,15 +38,12 @@ const IntroDeets = styled.div`
     content: "";
     display: block;
     height: 2px;
-    background-color: ${({ theme }) => theme.textAccent};
+    background-color: ${({ theme }) => theme.accent};
+    /* box-shadow: 1px 1px ${({ theme }) => theme.secondary}; */
     margin: 0.5rem 1rem;
   }
 
-  h2 {
-    font-size: 80px;
-    font-weight: 900;
-    color: ${({ theme }) => theme.textSecondary};
-  }
+
 
   h3 {
     /* margin-left: 1rem; */
@@ -57,8 +54,8 @@ const IntroDeets = styled.div`
 `;
 
 const Button = styled.button`
-  border: 1px solid ${({ theme }) => theme.textAccent};
-  background: none;
+  border: 1px solid ${({ theme }) => theme.accent};
+    /* color: ${({ theme }) => theme.accent}; */
   border-radius: 2px;
   padding: 10px;
   width: 140px;
@@ -69,13 +66,15 @@ const Button = styled.button`
   margin-top: 1.6rem;
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.textPrimary};
+    color: ${({ theme }) => theme.textSecondary};
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.secondary};
+    background: none;
+    background-color: ${({ theme }) => theme.accent};
+    /* color: ${({ theme }) => theme.textPrimary}; */
     cursor: pointer;
-    /* color: ${({ theme }) => theme.textAccent}; */
+    /* color: ${({ theme }) => theme.accent}; */
     transform: scale(1.05)
   }
 `;
@@ -89,7 +88,7 @@ const Intro = () => {
         </ProfilePic> */}
         <IntroDeets>
           {/* <p className="words">Hello, my name is</p> */}
-          <h2>Michael Chen</h2>
+          <h1 className="header ">Michael Chen</h1>
           <div className="intro-divider"></div>
           <p>Software Engineer | San Francisco, CA</p>
           {/* <h3>I convert words into magic through my keyboard.</h3> */}

@@ -30,7 +30,7 @@ const SkillsContainer = styled.div`
       display: block;
       height: 1px;
       width: 400px;
-      background-color: ${({ theme }) => theme.textAccent};
+      background-color: ${({ theme }) => theme.accent};
       top: -5px;
       margin-left: 20px;
       @media (max-width: 800px) {
@@ -72,7 +72,7 @@ const Skills = () => {
   return (
     <SkillsSection id="skills">
       <SkillsContainer data-aos="fade-up">
-        <h2>Technical Skills</h2>
+        <h2 className="header">Technical Skills</h2>
         <div className="divider"></div>
         <ul>
           {skills.map((skill) => (

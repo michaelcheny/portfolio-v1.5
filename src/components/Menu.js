@@ -56,7 +56,7 @@ const ResumeLink = styled.a`
   justify-self: flex-end; */
   &:hover {
     transform: scale(1.05);
-    color: ${(props) => props.theme.textAccent};
+    color: ${(props) => props.theme.accent};
   }
 `;
 
@@ -91,7 +91,7 @@ const SectionLinks = styled.div`
       &:hover {
         cursor: pointer;
         transform: scale(1.05);
-        color: ${({ theme }) => theme.textAccent};
+        color: ${({ theme }) => theme.accent};
       }
     }
   }

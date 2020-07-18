@@ -10,11 +10,8 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 20vh 0; */
-  /* border: 1px red solid; */
-
-  @media (max-width: 900px) {
-    /* flex-direction: row-reverse; */
+  .main-title {
+    margin-bottom: 5rem;
   }
 `;
 
@@ -23,25 +20,13 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 70%; */
   margin: 20vh 0;
-
-  /* margin-top: 20rem; */
-  /* .divider {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: ${({ theme }) => theme.textAccent};
-    margin: 0.5rem 1rem;
-    width: 300px;
-    margin-bottom: 2.5rem;
-  } */
 `;
 
 const ProjectContainer = styled.div`
   display: flex;
   /* justify-content: space-between; */
-  margin: 2.5rem 0;
+  /* margin: 2.5rem 0; */
   /* border: blue 1px solid; */
   width: 70vw;
   max-width: 1200px;
@@ -52,8 +37,8 @@ const ProjectContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     /* margin: 2rem 0; */
-    padding-top: 5rem;
-    margin: 4rem 0;
+    /* padding-top: 5rem; */
+    /* margin: 2.5rem 0; */
   }
 `;
 
@@ -67,14 +52,10 @@ const DetailContainer = styled.div`
   /* border: 1px green solid; */
 
   .title {
-    font-size: 2rem;
-    font-weight: bold;
-    /* color: ${(props) => props.theme.textSecondary}; */
-    padding-bottom: 1rem;
-    /* display: none; */
-    @media (max-width: 900px) {
-      padding-top: 1.5rem;
-      padding-bottom: 0.5rem;
+    /* margin-bottom: 1rem */
+    font-size: 1.5rem;
+    @media (max-width: 800px) {
+      padding-top: 1.25rem;
     }
   }
   .description {
@@ -94,16 +75,16 @@ const DetailContainer = styled.div`
       color: ${({ theme }) => theme.textSecondary};
       transition: 150ms linear;
       &:hover {
-        color: ${(props) => props.theme.textAccent};
+        color: ${(props) => props.theme.textSecondary};
         transform: scale(1.8);
       }
     }
-    @media (max-width: 900px) {
+    @media (max-width: 800px) {
       margin-top: 0.9rem;
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 800px) {
     max-width: 80%;
   }
 `;
@@ -112,7 +93,7 @@ const StackContainer = styled.div`
   margin-top: 0.8rem;
   span {
     /* background-color: ${(props) => props.theme.ternary}; */
-    /* color: ${(props) => props.theme.textSecondary}; */
+    /* color: ${(props) => props.theme.secondary}; */
     /* padding: 5px 10px; */
     font-size: 15px;
     border-radius: 3px;
@@ -136,7 +117,9 @@ const PhotoContainer = styled.div`
     /* max-width: 100%; */
     max-width: 400px;
     /* max-height: auto; */
-    @media (max-width: 900px) {
+    @media (max-width: 800px) {
+      /* object-fit: contain; */
+
       /* min-width: 300px; */
       /* transform: scale(1.25); */
       /* margin: 1rem; */
@@ -146,7 +129,7 @@ const PhotoContainer = styled.div`
     } */
   }
   @media (max-width: 900px) {
-    max-width: 80%;
+    max-width: 70%;
     /* width: 500px; */
     /* max-height: auto; */
   }
@@ -154,8 +137,8 @@ const PhotoContainer = styled.div`
 
 const Seperator = styled.hr`
   width: 70vw;
-  border: 0.5px ${({ theme }) => theme.textAccent} solid;
-
+  border: 0.3px ${({ theme }) => theme.secondary} solid;
+  margin: 2.5rem 0;
   :last-child {
     display: none;
   }
@@ -165,7 +148,8 @@ const Project = ({ project }) => {
   return (
     <ProjectContainer>
       <DetailContainer>
-        <span className="title">{project.name}</span>
+        {/* <span className="title">{project.name}</span> */}
+        <h2 className="title">{project.name}</h2>
         <div className="description">{project.description}</div>
         <StackContainer>
           {project.techStack.map((stack, index) => (
@@ -188,44 +172,13 @@ const Project = ({ project }) => {
   );
 };
 
-const Title = styled.h2`
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  padding-bottom: .3rem;
-  /* ::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 300px;
-    background-color: ${({ theme }) => theme.textAccent};
-    top: -5px;
-    margin-left: 20px;
-    @media (max-width: 800px) {
-      width: 150px;
-    }
-  }
-  ::before {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 300px;
-    background-color: ${({ theme }) => theme.textAccent};
-    top: -5px;
-    margin-right: 20px;
-    @media (max-width: 800px) {
-      width: 150px;
-    }
-  } */
-
-`;
-
 const Projects = () => {
   return (
     <Section id="projects">
       <Wrapper data-aos="fade-up">
-        <Title className="header">Projects</Title>
-        <div className="divider"></div>
+        {/* <Title className="header">Projects</Title> */}
+        <h2>Projects</h2>
+        <div className="divider main-title"></div>
         {data.projects.map((project, index) => (
           <>
             <Project project={project} key={index} />
