@@ -25,20 +25,13 @@ const Wrapper = styled.div`
 
 const ProjectContainer = styled.div`
   display: flex;
-  /* justify-content: space-between; */
-  /* margin: 2.5rem 0; */
-  /* border: blue 1px solid; */
   width: 70vw;
   max-width: 1200px;
-  /* height: 40vh; */
 
-  @media (max-width: 900px) {
+  @media (max-width: 800px) {
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    /* margin: 2rem 0; */
-    /* padding-top: 5rem; */
-    /* margin: 2.5rem 0; */
   }
 `;
 
@@ -67,7 +60,7 @@ const DetailContainer = styled.div`
   }
   .links {
     margin-left: 5px;
-    margin-top: 1.3rem;
+    margin-top: 1rem;
     /* align-self: center; */
     .link {
       transform: scale(1.5);
@@ -75,7 +68,7 @@ const DetailContainer = styled.div`
       color: ${({ theme }) => theme.textSecondary};
       transition: 150ms linear;
       &:hover {
-        color: ${(props) => props.theme.textSecondary};
+        color: ${(props) => props.theme.accent};
         transform: scale(1.8);
       }
     }
@@ -90,7 +83,7 @@ const DetailContainer = styled.div`
 `;
 
 const StackContainer = styled.div`
-  margin-top: 0.8rem;
+  /* margin-top: 0.8rem; */
   span {
     /* background-color: ${(props) => props.theme.ternary}; */
     /* color: ${(props) => props.theme.secondary}; */
@@ -100,36 +93,33 @@ const StackContainer = styled.div`
     margin-top: 0.8rem;
     margin-right: 1rem;
   }
-    @media (max-width: 900px) {
+    @media (max-width: 800px) {
       margin-top: 0.25rem;
     }
 `;
 
 const PhotoContainer = styled.div`
   width: 50%;
-  /* border: 1px red solid; */
-  /* float: right; */
   align-self: center;
   display: flex;
   justify-content: center;
+  /* opacity: 0.2; */
+  /* z-index: 2; */
+  position: relative;
   .project-image {
-    object-fit: cover;
-    /* max-width: 100%; */
-    max-width: 400px;
-    /* max-height: auto; */
+    object-fit: contain;
+    max-width: 350px;
     @media (max-width: 800px) {
       /* object-fit: contain; */
 
-      /* min-width: 300px; */
+      max-width: 300px;
       /* transform: scale(1.25); */
       /* margin: 1rem; */
     }
-    /* &:hover {
-      background-color: rgba(0, 0, 0, 0.5);
-    } */
   }
-  @media (max-width: 900px) {
-    max-width: 70%;
+
+  @media (max-width: 800px) {
+    max-width: 80%;
     /* width: 500px; */
     /* max-height: auto; */
   }

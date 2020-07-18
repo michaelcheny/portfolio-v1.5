@@ -11,9 +11,9 @@ const Toggle = styled.button`
   top: 0;
   margin-top: 1rem;
   margin-right: 1.1rem;
+    color: ${(props) => props.theme.textSecondary};
   /* background-color: ${(props) => props.theme.textSecondary}; */
   background: none;
-  color: ${(props) => props.theme.accent};
   transition: 200ms linear;
   border: none;
   outline: none;
@@ -21,8 +21,8 @@ const Toggle = styled.button`
   &:hover {
     cursor: pointer;
     transform: scale(1.15);
+  color: ${(props) => props.theme.accent};
     /* background-color: ${(props) => props.theme.accent}; */
-    color: ${(props) => props.theme.textSecondary};
   }
 `;
 
