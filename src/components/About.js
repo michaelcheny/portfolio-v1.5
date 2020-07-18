@@ -41,6 +41,13 @@ const Description = styled.div`
   justify-content: center;
   width: 55%;
   padding-right: 1rem;
+  .description {
+    /* color: ${(props) => props.theme.textSecondary}; */
+    background-color: ${(props) => props.theme.secondary};
+    padding: 1rem;
+    margin: 0.8rem 0;
+    border-radius: 2px;
+  }
   p {
     padding: 5px;
   }
@@ -93,9 +100,11 @@ const About = () => {
       <AboutContainer data-aos="fade-up">
         <Description>
           <h2 className="title tailing-divider">About Me</h2>
+          {/* <div className="description"> */}
           <p>Hi my name is Michael Chen. </p>
           <p>I'm a software engineer based in San Francisco, Ca.</p>
           <p>I am a Flatiron School alumni who loves to build things for the web. </p>
+          {/* </div> */}
           <h3 className="small-title tailing-divider">Personal Interests</h3>
           <p>When I'm not clacking away on my keyboard, I enjoy doing any of the following:</p>
           <ul>

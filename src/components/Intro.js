@@ -11,19 +11,16 @@ const Section = styled.section`
 const IntroContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* border: 1px hotpink solid; */
   max-width: 1024px;
-
+  padding-bottom: 5rem;
   @media (max-width: 800px) {
     width: auto;
   }
 `;
 
 const IntroDeets = styled.div`
-  /* border: red 1px solid; */
   display: flex;
   flex-direction: column;
-  padding-bottom: 3rem;
   justify-content: center;
 
   p {
@@ -55,27 +52,32 @@ const IntroDeets = styled.div`
 
 const Button = styled.button`
   border: 1px solid ${({ theme }) => theme.accent};
-    /* color: ${({ theme }) => theme.accent}; */
   border-radius: 2px;
-  padding: 10px;
-  width: 140px;
+  padding: 1rem 2rem;
+  /* width: 140px; */
+  background-color: ${({ theme }) => theme.accent};
   font-size: 20px;
-  /* font-weight: 600; */
+  /* background-color: transparent; */
   align-self: center;
   transition: 200ms linear;
   margin-top: 1.6rem;
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.textSecondary};
+    /* color: ${({ theme }) => theme.accent}; */
+ 
   }
 
   &:hover {
-    background: none;
+    border: 1px solid ${({ theme }) => theme.textSecondary};
     background-color: ${({ theme }) => theme.accent};
-    /* color: ${({ theme }) => theme.textPrimary}; */
     cursor: pointer;
     /* color: ${({ theme }) => theme.accent}; */
-    transform: scale(1.05)
+    transform: scale(1.05);
+    a{
+
+    color: ${({ theme }) => theme.textSecondary};
+    }
   }
 `;
 
@@ -83,11 +85,7 @@ const Intro = () => {
   return (
     <Section id="intro">
       <IntroContainer data-aos="fade-up">
-        {/* <ProfilePic>
-          <img src={pic} alt="profile pic" />
-        </ProfilePic> */}
         <IntroDeets>
-          {/* <p className="words">Hello, my name is</p> */}
           <h1 className="header ">Michael Chen</h1>
           <div className="intro-divider"></div>
           <p>Software Engineer | San Francisco, CA</p>

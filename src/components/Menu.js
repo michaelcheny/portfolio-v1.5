@@ -1,10 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { Item } from "../globalstyles";
 import { useClickOutside } from "../helpers/ClickOutsideHook";
 import resume from "../assets/resume/resume.pdf";
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb, faEnvelopeSquare, faFile } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faGithubSquare,
+  faMedium,
+  faYoutubeSquare,
+} from "@fortawesome/free-brands-svg-icons";
 
 const MenuContainer = styled.div`
   position: fixed;
@@ -23,7 +30,7 @@ const InsideMenu = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 30%;
-  width: 40%;
+  width: 60%;
   border-radius: 3px;
   background-color: ${(props) => props.theme.secondary};
   transition: 200ms;
@@ -42,21 +49,9 @@ const InsideMenu = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
-    width: 50vw;
-    height: 40vh;
-  }
-`;
-
-const ResumeLink = styled.a`
-  text-decoration: none;
-  color: ${(props) => props.theme.textSecondary};
-  transition: 200ms linear;
-  /* align-self: flex-end;
-  justify-self: flex-end; */
-  &:hover {
-    transform: scale(1.05);
-    color: ${(props) => props.theme.accent};
+  @media (max-width: 800px) {
+    width: 70%;
+    /* height: 40vh; */
   }
 `;
 
@@ -69,7 +64,7 @@ const SectionLinks = styled.div`
   /* border: 1px green solid; */
   height: 100%;
   width: 40%;
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.secondary};
   transition: 200ms linear;
   /* height: 70%; */
   h3 {
@@ -98,16 +93,19 @@ const SectionLinks = styled.div`
 `;
 
 const OtherLinks = styled.div`
+  background-color: ${({ theme }) => theme.primary};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 60%;
-  color: ${(props) => props.theme.textSecondary};
+  color: ${({ theme }) => theme.textSecondary};
 
-  /* border: 1px red solid; */
-  /* height: 70%; */
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+  }
   p {
     transition: 200ms linear;
   }
@@ -146,17 +144,55 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
           </a>
         </Contacts> */}
         <OtherLinks>
-          <p>Theme</p>
+          <h3>Contacts</h3>
+          <div className="container">
+            <Item href="mailto:michaelchengaming@gmail.com" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" className="icon" />{" "}
+              {/* michaelchengaming@gmail.com */}
+            </Item>
+            <Item
+              href="https://www.linkedin.com/in/michaelchen13/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faLinkedin} size="2x" className="icon" />{" "}
+              {/* linkedin.com/in/michaelchen13/ */}
+            </Item>
+            <Item href="https://github.com/michaelcheny" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faGithubSquare} size="2x" className="icon" />
+              {/* github.com/michaelcheny */}
+            </Item>
+            <Item
+              href="https://medium.com/@michaelychen"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon"
+            >
+              <FontAwesomeIcon icon={faMedium} size="2x" className="icon" />
+              {/* medium.com/@michaelychen */}
+            </Item>
+            <Item
+              href="https://www.youtube.com/channel/UCsVPeLiZClEYtyPHfweRniw?view_as=subscriber"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faYoutubeSquare} size="2x" className="icon" />
+              {/* youtube */}
+            </Item>
+          </div>
+
+          <h3>Theme</h3>
           <FontAwesomeIcon
             className={theme === "dark" ? "theme-dark btn" : "theme-light btn"}
             icon={faLightbulb}
             size="2x"
             onClick={() => (theme === "dark" ? setTheme("dark") : setTheme("light"))}
           />
-          <p>Links</p>
-          <ResumeLink href={resume} target="_blank" rel="noopener noreferrer">
-            Resume
-          </ResumeLink>
+
+          <h3>Resume</h3>
+          <Item href={resume} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faFile} size="2x" className="icon" />{" "}
+          </Item>
         </OtherLinks>
       </InsideMenu>
     </MenuContainer>

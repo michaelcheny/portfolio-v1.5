@@ -1,17 +1,20 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import bg from "./assets/images/DSC_0565.JPG";
 import lato from "./fonts/Lato.ttf";
 import merriLight from "./fonts/Merriweather-Light.ttf";
 
 export const GlobalStyle = createGlobalStyle`
+
 @font-face {
   font-family: 'Lato';
   src: local('Lato'), url(${lato}) format('truetype');
 }
+
 @font-face {
   font-family: 'Merriweather-Light';
   src: local('Merriweather-Light'), url(${merriLight}) format('truetype');
 }
+
   body {
     /* background: ${({ theme }) => theme.primary}; */
     background: url(${bg});
@@ -66,12 +69,30 @@ export const GlobalStyle = createGlobalStyle`
 
   h2 {
     font-size: 2rem;
-    /* padding-bottom: .3rem; */
     display: flex;
     align-items: center;
     color: ${({ theme }) => theme.textSecondary};
     font-family: 'Merriweather-Light'
   }
 
+  h3 {
+    font-family:'Merriweather-Light'; 
+    padding-bottom: .5rem;
+    padding-top: 1rem;
+  }
+
 
   `;
+
+export const Item = styled.a`
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: ${(props) => props.theme.textPrimary};
+  transition: 150ms linear;
+  .icon {
+    &:hover {
+      color: ${(props) => props.theme.accent};
+      transform: scale(1.05);
+    }
+  }
+`;

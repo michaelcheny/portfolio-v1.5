@@ -2,9 +2,9 @@ export const darkTheme = {
   // background
   primary: "#282a36",
   // other background
-  secondary: "#6e5052",
+  secondary: "#3e2326",
   // accent
-  accent: "#3e2326",
+  accent: "#6e5052",
   textPrimary: "#747687",
   textSecondary: "#a3a9ce",
 
@@ -15,14 +15,14 @@ export const darkTheme = {
   // textAccent: "#88C0D0",
 };
 
+// export const lightTheme = {
+//   primary: "#D8DEE9",
+//   secondary: "#ECEFF4",
+//   textPrimary: "#2E3440",
+//   textSecondary: "#4C566A",
+//   accent: "#81A1C1",
+// };
 export const lightTheme = {
-  primary: "#D8DEE9",
-  secondary: "#ECEFF4",
-  textPrimary: "#2E3440",
-  textSecondary: "#4C566A",
-  accent: "#81A1C1",
-};
-export const coffeeTheme = {
   // primary: "#b6a999",
   // secondary: "#796d5d",
   // textPrimary: "#99b0a8",
