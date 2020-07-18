@@ -105,7 +105,7 @@ const ProfilePic = styled.div`
 const About = () => {
   return (
     <AboutSection id="about">
-      <AboutContainer>
+      <AboutContainer data-aos="fade-up">
         <Description>
           <h2 className="title">About Me</h2>
           <p>Hi my name is Michael Chen. </p>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import { ThemeProvider } from "styled-components";
 import Intro from "./Intro";
@@ -12,11 +12,19 @@ import { useDarkMode } from "../helpers/useDarkMode";
 import About from "./About";
 // import Layout from "./Layout";
 import Skills from "./Skills";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [theme, themeToggler] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
+
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+    });
+  }, []);
 
   return (
     <ThemeProvider theme={themeMode}>

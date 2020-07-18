@@ -5,16 +5,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const Section = styled.section`
-  /* height: 100vh; */
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 30vh;
   /* border: 1px red solid; */
 
   @media (max-width: 900px) {
     /* flex-direction: row-reverse; */
   }
+`;
+
+const Wrapper = styled.div`
+  /* display: flex;
+  flex-direction: column; */
+  /* height: 70%; */
+  /* margin-top: 20rem; */
 `;
 
 const ProjectContainer = styled.div`
@@ -142,7 +150,7 @@ const Seperator = styled.hr`
 
 const Project = ({ project }) => {
   return (
-    <ProjectContainer>
+    <ProjectContainer data-aos="fade-up">
       <DetailContainer>
         <span className="title">{project.name}</span>
         <div className="description">{project.description}</div>
@@ -167,16 +175,43 @@ const Project = ({ project }) => {
   );
 };
 
+const Title = styled.h2`
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  ::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 300px;
+    background-color: ${({ theme }) => theme.textAccent2};
+    top: -5px;
+    margin-left: 20px;
+  }
+  ::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 300px;
+    background-color: ${({ theme }) => theme.textAccent2};
+    top: -5px;
+    margin-right: 20px;
+  }
+`;
+
 const Projects = () => {
   return (
     <Section id="projects">
-      <h2 className="title">Projects</h2>
+      {/* <Wrapper> */}
+      <Title data-aos="fade-up">Projects</Title>
       {data.projects.map((project, index) => (
         <>
           <Project project={project} key={index} />
           <Seperator></Seperator>
         </>
       ))}
+      {/* </Wrapper> */}
     </Section>
   );
 };

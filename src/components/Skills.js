@@ -70,7 +70,7 @@ const SkillsContainer = styled.div`
 const Skills = () => {
   return (
     <SkillsSection id="skills">
-      <SkillsContainer>
+      <SkillsContainer data-aos="fade-up">
         <h2 className="title">Skills</h2>
         <ul>
           {skills.map((skill) => (

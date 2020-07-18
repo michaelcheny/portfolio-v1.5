@@ -83,7 +83,7 @@ const Button = styled.button`
 const Intro = () => {
   return (
     <Section id="intro">
-      <IntroContainer>
+      <IntroContainer data-aos="fade-up">
         {/* <ProfilePic>
           <img src={pic} alt="profile pic" />
         </ProfilePic> */}
