@@ -18,7 +18,7 @@
     },
     {
       "name": "Real Life RPG",
-      "image": "https://cdn4.iconfinder.com/data/icons/documents-letters-and-stationery/400/doc-14-512.png",
+      "image": "https://media.giphy.com/media/jOzuOz2hEbP2f2i4bb/giphy.gif",
       "description": "Gamified task manager/goal tracker. Level up real life skills by completing activities and reaching your goals.",
       "techStack": ["Ruby", "Ruby on Rails", "mySql", "OAuth", "Bootstrap"],
       "githubLink": "https://github.com/michaelcheny/Real-Life-RPG-Rails-Project",
@@ -26,7 +26,7 @@
     },
     {
       "name": "Health-Track-O-Bot 3000",
-      "image": "https://cdn4.iconfinder.com/data/icons/documents-letters-and-stationery/400/doc-14-512.png",
+      "image": "https://i.imgur.com/MBu9wSM.png",
       "description": "Streamlined health tracker. Enter health stat, track meals and workouts, receive personalized feedback.",
       "techStack": ["Ruby", "Sinatra", "mySql", "Bcrypt", "OAuth"],
       "githubLink": "https://github.com/michaelcheny/The-Health-Track-O-Bot-3000-built-with-Sinatra-",
@@ -34,7 +34,7 @@
     },
     {
       "name": "Heathly Recipes Gem",
-      "image": "https://cdn4.iconfinder.com/data/icons/documents-letters-and-stationery/400/doc-14-512.png",
+      "image": "https://i.imgur.com/DjIeQBx.png",
       "description": "Ruby gem that scrapes the web for over 500 healthy recipes. Browse recipe by category, ingredients, or portion size.",
       "techStack": ["JavaScript", "HTML5 Canvas", "Ruby", "Ruby on Rails", "Postgresql"],
       "githubLink": "https://github.com/michaelcheny/Floppy-Drop-Javascript-game",
