@@ -97,7 +97,7 @@ export const Icon = styled.a`
   transition: 150ms linear;
   &:hover {
     color: ${(props) => props.theme.accent};
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
   }
 `;
 

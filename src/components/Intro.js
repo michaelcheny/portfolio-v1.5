@@ -47,24 +47,27 @@ const IntroDeets = styled.div`
 `;
 
 const Button = styled.button`
-  border: 1px solid ${({ theme }) => theme.textSecondary};
+  border: 1px solid ${({ theme }) => theme.accent};
+  /* border: none; */
   border-radius: 2px;
-  padding: 1rem 2rem;
-  background-color: ${({ theme }) => theme.accent};
+  padding: 0.8rem 1.6rem;
+  /* background-color: ${({ theme }) => theme.accent}; */
+  background-color: transparent;
   font-size: 20px;
   align-self: center;
   transition: 200ms linear;
   margin-top: 1.6rem;
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.textSecondary};
+    color: ${({ theme }) => theme.accent};
   }
 
   &:hover {
-    border: 1px solid ${({ theme }) => theme.secondary};
+    border: 1px solid ${({ theme }) => theme.textSecondary};
     background-color: ${({ theme }) => theme.accent};
+    /* opacity: 0.85; */
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.03);
     a {
       color: ${({ theme }) => theme.secondary};
     }
