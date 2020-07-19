@@ -41,7 +41,11 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.textPrimary}
+    color: ${({ theme }) => theme.textPrimary};
+    transition: 200ms linear;
+    &:hover {
+      color:${({ theme }) => theme.accent};
+    }
   }
 
   .divider {

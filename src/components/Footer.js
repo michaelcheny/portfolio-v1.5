@@ -14,6 +14,7 @@ const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  margin-top: 10vh;
 `;
 
 const SocialContainer = styled.div`

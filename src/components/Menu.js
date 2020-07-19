@@ -51,8 +51,8 @@ const InsideMenu = styled.div`
   }
 
   @media (max-width: 800px) {
-    width: 70%;
-    /* height: 40vh; */
+    width: 80%;
+    height: 40%;
   }
 `;
 

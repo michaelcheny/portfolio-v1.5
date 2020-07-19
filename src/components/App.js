@@ -23,7 +23,7 @@ const App = () => {
 
   useEffect(() => {
     Aos.init({
-      duration: 500,
+      duration: 400,
       easing: "ease-in-out",
     });
   }, []);
