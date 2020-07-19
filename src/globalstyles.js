@@ -39,6 +39,11 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 125%;
   }
 
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.textPrimary}
+  }
+
   .divider {
     content: "";
     display: block;
@@ -104,6 +109,7 @@ export const BulletList = styled.ul`
       content: "⌁ ";
       font-size: 20px;
       margin-bottom: 2px;
+      color: ${({ theme }) => theme.accent};
     }
     /* padding-bottom: 5px; */
   }

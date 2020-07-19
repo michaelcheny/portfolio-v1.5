@@ -68,7 +68,9 @@ const Footer = () => {
           <FontAwesomeIcon icon={faYoutubeSquare} size="2x" />
         </Icon>
       </SocialContainer>
-      <NameContainer>Built by Michael Chen</NameContainer>
+      <NameContainer>
+        <a href="https://github.com/michaelcheny/portfolio-v1.5">Built by Michael Chen</a>
+      </NameContainer>
     </FooterContainer>
   );
 };

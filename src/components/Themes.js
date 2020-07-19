@@ -4,7 +4,8 @@ export const darkTheme = {
   // other background
   secondary: "#3e2326",
   // accent
-  accent: "#6e5052",
+  // accent: "#6e5052",
+  accent: "#eb5e28",
   textPrimary: "#747687",
   textSecondary: "#a3a9ce",
 

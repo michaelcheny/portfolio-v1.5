@@ -30,6 +30,7 @@ const InsideMenu = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 30%;
+  max-width: 700px;
   width: 60%;
   border-radius: 3px;
   background-color: ${(props) => props.theme.secondary};
