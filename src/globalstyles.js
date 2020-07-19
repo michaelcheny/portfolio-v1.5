@@ -16,7 +16,6 @@ export const GlobalStyle = createGlobalStyle`
 }
 
   body {
-    /* background: ${({ theme }) => theme.primary}; */
     background: url(${bg});
     background-attachment: fixed;
     background-size: cover;
@@ -71,7 +70,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 80px;
+    font-size: 75px;
     font-weight: 900;
     color: ${({ theme }) => theme.textSecondary};
   }
@@ -115,6 +114,5 @@ export const BulletList = styled.ul`
       margin-bottom: 2px;
       color: ${({ theme }) => theme.accent};
     }
-    /* padding-bottom: 5px; */
   }
 `;

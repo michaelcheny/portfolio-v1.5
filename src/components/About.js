@@ -40,7 +40,6 @@ const Description = styled.div`
   width: 55%;
   padding-right: 1rem;
   .description {
-    /* color: ${(props) => props.theme.textSecondary}; */
     background-color: ${(props) => props.theme.secondary};
     padding: 1rem;
     margin: 0.8rem 0;
@@ -52,7 +51,6 @@ const Description = styled.div`
   @media (max-width: 800px) {
     width: 100%;
   }
-
 `;
 
 const ProfilePic = styled.div`
@@ -82,7 +80,12 @@ const About = () => {
           <h2 className="title tailing-divider">About Me</h2>
           <p>Hi my name is Michael Chen. </p>
           <p>I'm a software engineer based in San Francisco, Ca.</p>
-          <p>I am a Flatiron School alumni who loves to build things for the web. </p>
+          <p>
+            I am a Flatiron School alumni who loves to build things for the web. My goal is to build
+            clean and high-performing applications that can be used to improve lives. Some of my recent
+            projects were aim towards improving health, productivity, teamwork, and self-care.
+          </p>
+          <p>Want to collab or have a chat? Let's get in touch!</p>
           <h3 className="small-title tailing-divider">Personal Interests</h3>
           <p>When I'm not clacking away on my keyboard, I enjoy doing any of the following:</p>
           <BulletList>

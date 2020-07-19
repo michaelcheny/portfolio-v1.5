@@ -8,7 +8,7 @@ import {
   faMedium,
   faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelopeSquare, faFile } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 
 const FooterContainer = styled.div`
   display: flex;
@@ -29,17 +29,6 @@ const NameContainer = styled.div`
   justify-content: center;
   color: ${(props) => props.theme.textPrimary};
 `;
-
-// const Item = styled.a`
-//   display: inline-block;
-//   margin: 0 1rem;
-//   color: ${(props) => props.theme.textPrimary};
-//   transition: 150ms linear;
-//   &:hover {
-//     color: ${(props) => props.theme.accent};
-//     transform: scale(1.3);
-//   }
-// `;
 
 const Footer = () => {
   return (

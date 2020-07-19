@@ -4,6 +4,10 @@ import data from "../assets/data/data.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
+// TODOS:
+// - add more projects
+// - add selector to filter projects (game, web, etc)
+
 const Section = styled.section`
   height: 100%;
   display: flex;
@@ -51,7 +55,6 @@ const DetailContainer = styled.div`
     }
   }
   .description {
-    /* color: ${(props) => props.theme.textSecondary}; */
     background-color: ${(props) => props.theme.secondary};
     padding: 1rem;
     margin: 0.8rem 0;
@@ -60,7 +63,6 @@ const DetailContainer = styled.div`
   .links {
     margin-left: 5px;
     margin-top: 1rem;
-    /* align-self: center; */
     .link {
       transform: scale(1.5);
       margin-right: 1.5rem;

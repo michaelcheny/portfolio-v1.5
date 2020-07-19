@@ -35,7 +35,6 @@ const InsideMenu = styled.div`
   border-radius: 3px;
   background-color: ${(props) => props.theme.secondary};
   transition: 200ms;
-  /* text-decoration: none; */
 
   .theme-light {
     color: orange;
