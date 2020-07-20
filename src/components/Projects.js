@@ -114,15 +114,15 @@ const PhotoContainer = styled.div`
   }
 `;
 
-const Seperator = styled.hr`
-  width: 80vw;
-  max-width: 1200px;
-  border: 0.3px ${({ theme }) => theme.secondary} solid;
-  margin: 2.5rem 0;
-  :last-child {
-    display: none;
-  }
-`;
+// const Seperator = styled.hr`
+//   width: 80vw;
+//   max-width: 1200px;
+//   border: 0.3px ${({ theme }) => theme.secondary} solid;
+//   margin: 2.5rem 0;
+//   :last-child {
+//     display: none;
+//   }
+// `;
 
 const Project = ({ project }) => {
   return (
