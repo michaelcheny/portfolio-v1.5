@@ -36,9 +36,9 @@
       "name": "Heathly Recipes Gem",
       "image": "https://i.imgur.com/DjIeQBx.png",
       "description": "Ruby gem that scrapes the web for over 500 healthy recipes. Browse recipe by category, ingredients, or portion size.",
-      "techStack": ["JavaScript", "HTML5 Canvas", "Ruby", "Ruby on Rails", "Postgresql"],
-      "githubLink": "https://github.com/michaelcheny/Floppy-Drop-Javascript-game",
-      "demoLink": "https://youtu.be/Ya_F4OZHX0E"
+      "techStack": ["Ruby", "Nokogiri"],
+      "githubLink": "https://github.com/michaelcheny/Healthy_Recipes_Gem",
+      "demoLink": "https://youtu.be/t8yE8Kz8n4g"
     }
   ],
   "hobbies": [

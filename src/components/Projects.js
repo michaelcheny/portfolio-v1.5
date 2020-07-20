@@ -31,7 +31,7 @@ const ProjectContainer = styled.div`
   display: flex;
   width: 80vw;
   max-width: 1200px;
-
+  margin-bottom: 5vh;
   @media (max-width: 800px) {
     width: 90vw;
     flex-direction: column-reverse;
@@ -126,7 +126,7 @@ const Seperator = styled.hr`
 
 const Project = ({ project }) => {
   return (
-    <ProjectContainer>
+    <ProjectContainer data-aos="fade-up">
       <DetailContainer>
         <h2 className="title">{project.name}</h2>
         <div className="description">{project.description}</div>
@@ -160,7 +160,7 @@ const Projects = () => {
         {data.projects.map((project, index) => (
           <>
             <Project project={project} key={index} />
-            <Seperator></Seperator>
+            {/* <Seperator></Seperator> */}
           </>
         ))}
       </Wrapper>

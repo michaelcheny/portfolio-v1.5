@@ -86,13 +86,15 @@ const About = () => {
             projects were aim towards improving health, productivity, teamwork, and self-care.
           </p>
           <p>Want to collab or have a chat? Let's get in touch!</p>
-          <h3 className="small-title tailing-divider">Personal Interests</h3>
-          <p>When I'm not clacking away on my keyboard, I enjoy doing any of the following:</p>
-          <BulletList>
-            {hobbies.map((hobby, index) => (
-              <li key={index}>{hobby}</li>
-            ))}
-          </BulletList>
+          <div data-aos="fade-up">
+            <h3 className="small-title tailing-divider">Personal Interests</h3>
+            <p>When I'm not clacking away on my keyboard, I enjoy doing any of the following:</p>
+            <BulletList>
+              {hobbies.map((hobby, index) => (
+                <li key={index}>{hobby}</li>
+              ))}
+            </BulletList>
+          </div>
         </Description>
 
         <ProfilePic>

@@ -138,13 +138,6 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
           <Icon href={resume} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFilePdf} size="2x" />
           </Icon>
-          <h3>Theme</h3>
-          <FontAwesomeIcon
-            className={theme === "dark" ? "theme-dark btn" : "theme-light btn"}
-            icon={faLightbulb}
-            size="2x"
-            onClick={() => (theme === "dark" ? setTheme("dark") : setTheme("light"))}
-          />
           <h3>Get In Touch</h3>
           <div className="container">
             <Icon href="mailto:michaelchengaming@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -176,6 +169,13 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
               <FontAwesomeIcon icon={faYoutubeSquare} size="2x" />
             </Icon>
           </div>
+          <h3>Theme</h3>
+          <FontAwesomeIcon
+            className={theme === "dark" ? "theme-dark btn" : "theme-light btn"}
+            icon={faLightbulb}
+            size="2x"
+            onClick={() => (theme === "dark" ? setTheme("dark") : setTheme("light"))}
+          />
         </OtherLinks>
       </InsideMenu>
     </MenuContainer>
