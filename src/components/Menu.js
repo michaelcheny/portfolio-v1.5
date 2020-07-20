@@ -127,9 +127,9 @@ const Menu = ({ setShowMenu, setTheme, theme }) => {
             <Link className="link" to="projects" smooth duration={400} onClick={handleClickNav}>
               Projects
             </Link>
-            <Link className="link" to="social" smooth duration={400} onClick={handleClickNav}>
+            {/* <Link className="link" to="social" smooth duration={400} onClick={handleClickNav}>
               Socials
-            </Link>
+            </Link> */}
           </div>
         </SectionLinks>
 
