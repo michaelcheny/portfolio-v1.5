@@ -3,6 +3,7 @@ import styled from "styled-components";
 import data from "../assets/data/data.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 // TODOS:
 // - add more projects
@@ -136,12 +137,17 @@ const Project = ({ project }) => {
           ))}
         </StackContainer>
         <div className="links">
-          <a href={project.githubLink} title="GitHub">
+          <a href={project.githubLink} title="GitHub" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} className="link" />
           </a>
-          <a href={project.demoLink} title="Demo">
+          <a href={project.demoLink} title="Demo" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faYoutube} className="link" />
           </a>
+          {project.liveLink && (
+            <a href={project.liveLink} title="Link" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faExternalLinkAlt} className="link" />
+            </a>
+          )}
         </div>
       </DetailContainer>
       <PhotoContainer>

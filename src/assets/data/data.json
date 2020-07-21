@@ -10,11 +10,12 @@
     },
     {
       "name": "Floppy Drop",
-      "image": "https://media.giphy.com/media/QXUAnCDqjtVOxYB0Q3/giphy.gif",
+      "image": "https://media.giphy.com/media/TIMCmhts6eqj8NbCRh/giphy.gif",
       "description": "Interactive browser game where player collide with falling objects to earn points. Drawl contact for the easy points, avoid charges, referees help the most.",
       "techStack": ["JavaScript", "HTML5 Canvas", "Ruby", "Ruby on Rails", "Postgresql"],
       "githubLink": "https://github.com/michaelcheny/Floppy-Drop-Javascript-game",
-      "demoLink": "https://youtu.be/Ya_F4OZHX0E"
+      "demoLink": "https://youtu.be/Ya_F4OZHX0E",
+      "liveLink": "https://floppy-drop.firebaseapp.com/"
     },
     {
       "name": "Real Life RPG",
