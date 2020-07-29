@@ -81,8 +81,8 @@ const About = () => {
           <p>Hi my name is Michael Chen. </p>
           <p>I'm a software engineer based in San Francisco, Ca.</p>
           <p>
-            I am a Flatiron School alumni who loves to build things for the web. My goal is to build
-            clean and high-performing applications that can be used to improve lives. Some of my recent
+            I am a Flatiron School alumni who loves to build things for the web. I strive to build clean
+            and high-performing applications that can be used to improve lives. Some of my recent
             projects were aim towards improving health, productivity, teamwork, and self-care.
           </p>
           <p>Want to collab or have a chat? Let's get in touch!</p>
