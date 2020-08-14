@@ -140,9 +140,11 @@ const Project = ({ project }) => {
           <a href={project.githubLink} title="GitHub" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} className="link" />
           </a>
-          <a href={project.demoLink} title="Demo" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faYoutube} className="link" />
-          </a>
+          {project.demoLink && (
+            <a href={project.demoLink} title="Demo" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faYoutube} className="link" />
+            </a>
+          )}
           {project.liveLink && (
             <a href={project.liveLink} title="Link" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faExternalLinkAlt} className="link" />

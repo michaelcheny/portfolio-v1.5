@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "name": "If It Fits Your Mouth",
+      "image": "https://media.giphy.com/media/izbYdNYRmZPPeal0ka/giphy.gif",
+      "description": "If It Fits Your Mouth is a macronutrients calculator for flexible dieting (If it fits your macros). Uses the Mifflin St. Jeor formula to calculate the user's bmr.",
+      "techStack": ["React", "TypeScript", "SCSS"],
+      "githubLink": "https://github.com/michaelcheny/if-it-fits-your-mouth",
+      "liveLink": "https://if-it-fits-your-mouth.firebaseapp.com/"
+    },
+    {
       "name": "LFG Collab",
       "image": "https://media.giphy.com/media/LM90JPKLqzOFMl23qL/giphy.gif",
       "description": "An online project hub for users to collaborate on projects together. Host your own room or browse the project bulletin for a project you want to be a part of. Collaborate in real-time.",
@@ -52,6 +60,7 @@
   ],
   "skills": [
     "JavaScript (ES6+)",
+    "TypeScript",
     "React",
     "Redux",
     "Ruby",
