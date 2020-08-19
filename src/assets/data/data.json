@@ -12,7 +12,15 @@
       "name": "LFG Collab",
       "image": "https://media.giphy.com/media/LM90JPKLqzOFMl23qL/giphy.gif",
       "description": "An online project hub for users to collaborate on projects together. Host your own room or browse the project bulletin for a project you want to be a part of. Collaborate in real-time.",
-      "techStack": ["React", "Redux", "Socket.io", "Ruby", "Ruby on Rails", "Postgresql", "Bootstrap"],
+      "techStack": [
+        "React",
+        "Redux",
+        "Socket.io",
+        "Ruby",
+        "Ruby on Rails",
+        "Postgresql",
+        "Bootstrap"
+      ],
       "githubLink": "https://github.com/michaelcheny/LFG-Collab-Front-End",
       "demoLink": "https://youtu.be/aZZLe_tEkDk"
     },
@@ -72,6 +80,7 @@
     "Socket.io",
     "Git/GitHub",
     "REST API",
-    "Nodejs"
+    "Nodejs",
+    "Express"
   ]
 }
