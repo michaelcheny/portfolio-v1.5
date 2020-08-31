@@ -3,7 +3,7 @@
     {
       "name": "If It Fits Your Mouth",
       "image": "https://media.giphy.com/media/izbYdNYRmZPPeal0ka/giphy.gif",
-      "description": "If It Fits Your Mouth is a macronutrients calculator for flexible dieting (If it fits your macros). Uses the Mifflin St. Jeor formula to calculate the user's bmr.",
+      "description": "If It Fits Your Mouth is a macronutrients calculator for flexible dieting (If it fits your macros). Uses the Mifflin St. Jeor formula to calculate the user's bmr. Returns recommended calorie and macronutrient intake for specific goal.",
       "techStack": ["React", "TypeScript", "SCSS"],
       "githubLink": "https://github.com/michaelcheny/if-it-fits-your-mouth",
       "liveLink": "https://if-it-fits-your-mouth.firebaseapp.com/"
