@@ -51,6 +51,7 @@ export const GlobalStyle = createGlobalStyle`
     content: "";
     display: block;
     height: 2px;
+    /* color:  */
     background-color: ${({ theme }) => theme.accent};
     margin: 0.5rem 1rem;
     width: 300px;
