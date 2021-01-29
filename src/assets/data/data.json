@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "name": "Debullying Bot",
+      "image": "https://i.imgur.com/JIYqUWv.png",
+      "description": "A Discord bot that prevents cyber-bullying, with cross-server matchmaking functionality. Built this with an amazing team of project manager and designers.",
+      "techStack": ["JavaScript", "Node", "MongoDB", "Discord.js framework"],
+      "githubLink": "https://github.com/debullyingdiscordbot/debullying-bot",
+      "demoLink": ""
+    },
+    {
       "name": "If It Fits Your Mouth",
       "image": "https://media.giphy.com/media/izbYdNYRmZPPeal0ka/giphy.gif",
       "description": "If It Fits Your Mouth is a macronutrients calculator for flexible dieting (If it fits your macros). Uses the Mifflin St. Jeor formula to calculate the user's bmr. Returns recommended calorie and macronutrient intake for specific goal.",
