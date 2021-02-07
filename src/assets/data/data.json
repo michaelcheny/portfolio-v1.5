@@ -6,7 +6,7 @@
       "description": "A Discord bot that prevents cyber-bullying, with cross-server matchmaking functionality. Built this with an amazing team of project manager and designers.",
       "techStack": ["JavaScript", "Node", "MongoDB", "Discord.js framework"],
       "githubLink": "https://github.com/debullyingdiscordbot/debullying-bot",
-      "demoLink": ""
+      "liveLink": "https://discordapp.com/oauth2/authorize?client_id=623889022003183616&scope=bot&permissions=36981760"
     },
     {
       "name": "If It Fits Your Mouth",
