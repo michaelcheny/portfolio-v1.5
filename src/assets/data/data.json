@@ -6,7 +6,7 @@
       "description": "A Discord bot that prevents cyber-bullying, with cross-server matchmaking functionality. Built this with an amazing team of project manager and designers.",
       "techStack": ["JavaScript", "Node", "Express", "MongoDB", "Discord.js framework"],
       "githubLink": "https://github.com/debullyingdiscordbot/debullying-bot",
-      "demoLink": "https://youtu.be/EPUnPNapcic",
+      "demoLink": "https://youtu.be/EqQGg8AU6BU",
       "liveLink": "https://discordapp.com/oauth2/authorize?client_id=623889022003183616&scope=bot&permissions=36981760"
     },
     {
